@@ -5,7 +5,7 @@
 
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.5
+      <b>Version</b> 
     </div>
     <strong> &copy;  <a href="http://adminlte.io">FWRTDS</a>.</strong> All rights
     reserved.
