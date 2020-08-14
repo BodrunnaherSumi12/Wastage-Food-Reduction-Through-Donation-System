@@ -5,7 +5,7 @@
 <head>
 <title>WFRTDS</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
@@ -28,7 +28,7 @@
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="index.html">Home</a></li>
+      <li class="active"><a href="index.php">Home</a></li>
       <li><a href="#">Posts</a></li>
       <li><a class="drop" href="#">Donations</a>
         <ul>
@@ -49,8 +49,20 @@
       <li><a href="#">Donners</a></li>
       <li><a href="#">Receivers</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="#">Log IN</a></li>
+      <li><a href="#">Log IN</a>
+      <ul>
+         <li><a href="Admin/login.php">Log In As Admin</a></li>
+          <li><a href="#">Log In As Donner</a></li>
+          <li><a href="#">Log In As Receiver</a>
+          </li>
+        </ul>
+    </li>
     </ul>
     <!-- ################################################################################################ -->
   </nav>
 </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('images/1.jpg.jpg');">
+  <div id="pageintro" class="hoc clear"> 
