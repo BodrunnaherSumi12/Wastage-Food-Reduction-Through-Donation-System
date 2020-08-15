@@ -1,3 +1,9 @@
+<?php
+  include 'database/database.php';
+  
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="">
@@ -41,8 +47,8 @@
       </li>
       <li><a class="drop" href="#">Registration</a>
         <ul>
-          <li><a href="#">Registration As Donner</a></li>
-          <li><a href="#">Registration As Receiver</a>
+          <li><a href="user-register.php">Registration As Donner</a></li>
+          <li><a href="user2-register.php">Registration As Receiver</a>
           </li>
         </ul>
       </li>

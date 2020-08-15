@@ -2,4 +2,4 @@
     define('HOST', 'localhost');
     define('USER', 'root');
     define('PASS', '');
-    define('DBNAME', 'project');
+    define('DBNAME', 'iubat');

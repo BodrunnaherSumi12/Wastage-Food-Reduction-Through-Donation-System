@@ -215,7 +215,9 @@
       <form method="post" action="#">
         <fieldset>
           <legend>Comment</legend>
+          <label for="fname">Your name:</label><br>
           <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <label for="fname">Add Comment:</label><br>
           <input class="btmspace-30" type="text" value="" placeholder="Comment">
           <button type="submit" value="submit">Submit</button>
         </fieldset>
