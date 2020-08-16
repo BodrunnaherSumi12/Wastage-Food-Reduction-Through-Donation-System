@@ -131,7 +131,7 @@ if (! empty($errorMessage) && is_array($errorMessage)) {
                 </div>
                 <div>
                     <input type="submit"
-                        name="register-user" value="Register"
+                        name="register_form" value="Register"
                         class="btnRegister">
                 </div>
             </div>

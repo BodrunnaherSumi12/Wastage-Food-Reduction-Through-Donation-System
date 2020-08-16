@@ -1,5 +1,15 @@
 <?php
   include 'database/database.php';
+  session_start();
+
+  if (isset($_SESSION['errors'])) {
+    $err = $_SESSION['errors'];
+    unset($_SESSION['errors']);
+}
+if (isset($_SESSION['success'])) {
+  $message = $_SESSION['success'];
+  unset($_SESSION['success']);
+}
   
 ?>
 
