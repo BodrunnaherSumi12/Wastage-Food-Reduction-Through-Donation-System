@@ -1,6 +1,7 @@
 <?php
 
-    include dirname(__FILE__). './config.php';
+include dirname(__FILE__). './config.php';
+
 
     class Database {
         private $host  = HOST;

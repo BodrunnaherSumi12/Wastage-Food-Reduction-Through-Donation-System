@@ -1,7 +1,8 @@
 <?php
     include dirname(__FILE__).'/../database/database.php';
-    session_start();
-    $db = new Database();
+    
+   session_start();
+   $db = new Database();
 
     $errors = [];
     $success = [];
@@ -13,17 +14,19 @@
         $password = $_POST['password'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
+        $City = $_POST['City'];
+        $Town = $_POST['Town'];
 
         if ($name && $email && $username && $password) {
             // unique validation
-            $email_exists_query = "SELECT * FROM users WHERE email='$email'";
+            $email_exists_query = "SELECT * FROM donner_registration WHERE email='$email'";
             $email_exists = $db->getData($email_exists_query);
 
             if ($email_exists) {
                 $errors['email'] = "Email already taken";
             }
 
-            $username_exists_query = "SELECT * FROM users WHERE username='$username'";
+            $username_exists_query = "SELECT * FROM donner_registration WHERE username='$username'";
             $username_exists = $db->getData($username_exists_query);
 
             if ($username_exists) {
@@ -37,13 +40,13 @@
                 $pass = sha1($password);
 
                 // store register
-                $insert_query = "INSERT INTO users (name, email, username, password, phone, address) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address')";
+                $insert_query = "INSERT INTO donner_registration (name, email, username, password, phone, address,city,town) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address','$city','$town')";
                 $run = $db->store($insert_query);
     
                 if ($run) {
-                    $success['success_message'] = "User registered successfully";
+                    $success['success_message'] = "Donner registered successfully";
                 } else {
-                    $success['error_message'] = "User register failed ".$db->error;
+                    $success['error_message'] = "Donner register failed ".$db->error;
                 }
     
                 $_SESSION['success'] = $success;

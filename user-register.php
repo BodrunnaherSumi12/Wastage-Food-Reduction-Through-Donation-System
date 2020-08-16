@@ -10,10 +10,10 @@
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <form name="frmRegistration" method="post" action="">
+<form action="submit/user-register-submit.php" method="POST">
         <div class="demo-table">
         <div class="form-head">Donner Registration Form</div>
-        <form action="submit/user-register-submit.php" method="POST">
+      
             
 <?php
 if (! empty($errorMessage) && is_array($errorMessage)) {
@@ -101,7 +101,7 @@ if (! empty($errorMessage) && is_array($errorMessage)) {
 
                     <div class="form-group">
                         <label for="_name">City</label>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Name">
+                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter City">
                         <span class="text-danger">
                             <?php 
                                 if(isset($err['name'])) {
@@ -113,7 +113,7 @@ if (! empty($errorMessage) && is_array($errorMessage)) {
 
                             <div class="form-group">
                         <label for="_name">Town</label>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Name">
+                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Town">
                         <span class="text-danger">
                             <?php 
                                 if(isset($err['name'])) {
