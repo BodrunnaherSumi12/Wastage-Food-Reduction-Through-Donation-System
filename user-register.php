@@ -1,10 +1,9 @@
 <?php
     $page_title = 'Home';
     // header include
-    include 'header.php';
+    include 'include/header.php';
 ?>
 
-<html>
 <head>
 <title> Donner Registration Form</title>
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
@@ -15,19 +14,15 @@
         <div class="form-head">Donner Registration Form</div>
       
             
-<?php
-if (! empty($errorMessage) && is_array($errorMessage)) {
-    ?>	
-            <div class="error-message">
-            <?php 
-            foreach($errorMessage as $message) {
-                echo $message . "<br/>";
-                         }
+<?php 
+            if (isset($message['success_message'])) {
+                echo '<div class="alert alert-success">'.$message['success_message'].'</div>';
+            }
+            if (isset($message['error_message'])) {
+                echo '<div class="alert alert-danger">'.$message['error_message'].'</div>';
+            }
+            
             ?>
-             </div>
-     <?php
-          }
-        ?>
 
 
                       <div class="form-group">
@@ -138,4 +133,9 @@ if (! empty($errorMessage) && is_array($errorMessage)) {
         </div>
     </form>
 </body>
-</html>
+
+<?php
+    $page_title = 'Home';
+    // header footer
+    include 'include/footer.php';
+?>

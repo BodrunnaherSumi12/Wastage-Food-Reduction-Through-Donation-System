@@ -1,5 +1,5 @@
 <?php
-  include 'database/database.php';
+   include dirname(__FILE__).'/../database/database.php';
   session_start();
 
   if (isset($_SESSION['errors'])) {
@@ -9,6 +9,11 @@
 if (isset($_SESSION['success'])) {
   $message = $_SESSION['success'];
   unset($_SESSION['success']);
+}
+if(isset($_SESSION['old_data']))
+{
+  $data = $_SESSION['old_data'];
+  unset($_SESSION['old_data']);
 }
   
 ?>
@@ -23,6 +28,8 @@ if (isset($_SESSION['success'])) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/login.css" rel="stylesheet">
 </head>
 <body id="top">
 
@@ -68,8 +75,8 @@ if (isset($_SESSION['success'])) {
       <li><a href="#">Log IN</a>
       <ul>
          <li><a href="Admin/login.php">Log In As Admin</a></li>
-          <li><a href="#">Log In As Donner</a></li>
-          <li><a href="#">Log In As Receiver</a>
+          <li><a href="donner_login.php">Log In As Donner</a></li>
+          <li><a href="receiver-login.php">Log In As Receiver</a>
           </li>
         </ul>
     </li>
@@ -78,7 +85,3 @@ if (isset($_SESSION['success'])) {
   </nav>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('images/1.jpg.jpg');">
-  <div id="pageintro" class="hoc clear"> 
