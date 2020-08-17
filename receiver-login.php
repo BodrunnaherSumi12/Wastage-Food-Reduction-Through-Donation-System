@@ -1,8 +1,4 @@
 <?php
-    $page_title = 'Home';
-    // header include
-   // include 'header.php';
- 
     session_start();
     if (isset($_SESSION['errors'])) {
         $errors = $_SESSION['errors'];

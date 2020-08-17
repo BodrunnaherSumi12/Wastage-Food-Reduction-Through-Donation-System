@@ -28,7 +28,7 @@
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="project/index.php">Home</a></li>
       <li><a href="#">Posts</a></li>
       <li><a href="#">Donate Post</a>
       </li>

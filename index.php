@@ -6,22 +6,22 @@
   <div class="wrapper bgded overlay" style="background-image:url('images/1.jpg.jpg');
  ">
   <div id="pageintro" class="hoc clear"> 
-    <!-- ################################################################################################ -->
+   
     <article>
       <p>Chairity Site</p>
       <h3 class="heading">Wastage Food Reduction Through Donation Sytem</h3>
       <p></p>
      
     </article>
-    <!-- ################################################################################################ -->
+   
   </div>
 </div>
-<!-- ################################################################################################ -->
+
 
 <div class="wrapper row3">
   <main class="hoc container clear"> 
     <!-- main body -->
-    <!-- ################################################################################################ -->
+    
     <section id="introblocks">
       <div class="sectiontitle">
         <h6 class="heading">Our Future Work</h6>
@@ -220,7 +220,7 @@
         </fieldset>
       </form>
     </div>
-    <!-- ################################################################################################ -->
+   
   </footer>
 </div>
 <?php

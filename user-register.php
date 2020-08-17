@@ -9,9 +9,9 @@
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<form action="submit/user-register-submit.php" method="POST">
+<form action="submit/user-register-submit.php" method="POST" style="padding-top:50px;">
         <div class="demo-table">
-        <div class="form-head">Donner Registration Form</div>
+        <div class="form-head">Donner Registration</div>
       
             
 <?php 
