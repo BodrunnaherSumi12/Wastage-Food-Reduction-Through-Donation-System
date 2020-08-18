@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    
+      session_start();
     if (isset($_SESSION['errors'])) {
         $errors = $_SESSION['errors'];
         unset($_SESSION['errors']);
@@ -78,6 +79,6 @@
         </div>
     </div>
 </body>
+
+
 </html>
-
-

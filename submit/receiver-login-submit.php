@@ -12,7 +12,7 @@
         if ($email  && $password) {
             $password = sha1($password);
             // attempt login
-            $query = "SELECT * FROM receiver_registration WHERE (email='$email' OR username='$email') AND password='$password'";
+            $query = "SELECT * FROM receivers WHERE (email='$email' OR username='$email') AND password='$password'";
             $run  = $db->conn->query($query);
             
             if ($run->num_rows > 0) {

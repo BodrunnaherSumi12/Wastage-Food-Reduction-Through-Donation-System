@@ -27,6 +27,8 @@ if(isset($_SESSION['old_data']))
 <title>WFRTDS</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />-->
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/login.css" rel="stylesheet">

@@ -19,14 +19,14 @@
 
         if ($name && $email && $username && $password) {
             // unique validation
-            $email_exists_query = "SELECT * FROM donner_registration WHERE email='$email'";
+            $email_exists_query = "SELECT * FROM donners WHERE email='$email'";
             $email_exists = $db->getData($email_exists_query);
 
             if ($email_exists) {
                 $errors['email'] = "Email already taken";
             }
 
-            $username_exists_query = "SELECT * FROM donner_registration WHERE username='$username'";
+            $username_exists_query = "SELECT * FROM donners WHERE username='$username'";
             $username_exists = $db->getData($username_exists_query);
 
             if ($username_exists) {
@@ -40,7 +40,7 @@
                 $pass = sha1($password);
 
                 // store register
-                $insert_query = "INSERT INTO donner_registration (name, email, username, password, phone, address,city,town) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address','$city','$town')";
+                $insert_query = "INSERT INTO donners (name, email, username, password, phone, address,city,town) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address','$city','$town')";
                 $run = $db->store($insert_query);
     
                 if ($run) {

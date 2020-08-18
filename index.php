@@ -226,5 +226,5 @@
 <?php
     $page_title = 'Home';
     // header footer
-    include 'footer.php';
+    include 'include/footer.php';
 ?>

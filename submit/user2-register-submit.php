@@ -19,14 +19,14 @@
 
         if ($name && $email && $username && $password) {
             // unique validation
-            $email_exists_query = "SELECT * FROM receiver_registration WHERE email='$email'";
+            $email_exists_query = "SELECT * FROM receivers WHERE email='$email'";
             $email_exists = $db->getData($email_exists_query);
 
             if ($email_exists) {
                 $errors['email'] = "Email already taken";
             }
 
-            $username_exists_query = "SELECT * FROM receiver_registration WHERE username='$username'";
+            $username_exists_query = "SELECT * FROM receivers WHERE username='$username'";
             $username_exists = $db->getData($username_exists_query);
 
             if ($username_exists) {
@@ -35,12 +35,12 @@
 
             if ($email_exists || $username_exists) {
                 $_SESSION['errors'] = $errors;
-                header('location:../user-register.php');
+                header('location:../user2-register.php');
             } else {
                 $pass = sha1($password);
 
                 // store register
-                $insert_query = "INSERT INTO receiver_registration (name, email, username, password, phone, address,city,town) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address','$city','$town')";
+                $insert_query = "INSERT INTO receivers (name, email, username, password, phone, address,city,town) VALUES('$name', '$email', '$username', '$pass', '$phone', '$address','$city','$town')";
                 $run = $db->store($insert_query);
     
                 if ($run) {

@@ -1,32 +1,11 @@
  <?php
-    include 'database/database.php';
-    session_start();
-  
-    if (isset($_SESSION['errors'])) {
-      $err = $_SESSION['errors'];
-      unset($_SESSION['errors']);
-  }
-  if (isset($_SESSION['success'])) {
-    $message = $_SESSION['success'];
-    unset($_SESSION['success']);
-  }
-  if(isset($_SESSION['old_data']))
-  {
-    $data = $_SESSION['old_data'];
-    unset($_SESSION['old_data']);
-  }
-    
+   $page_title = 'Home';
+   // header include
+   include 'include/header.php';
 ?>
 
-<html>
-<head>
-<title> Receiver Registration Form</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />-->
-</head>
-<body>
-<div class="row">
-<div class="col-md-5 offset-md-3">
+
+
     <div class="container">
 
 <form action="submit/user2-register-submit.php" method="POST" style="padding-top:50px;">
@@ -149,20 +128,24 @@
                     <input type="checkbox" name="terms"> I accept terms
                     and conditions
                 </div>
-                <div>
-                    <input type="submit"
+                <div class="row">
+                <div class= form-group col-lg-6>
+               
+                <input type="submit"
                         name="register_form" value="Register"
-                        class="btnRegister" style= color-success;>
+                        class="btn btn-succeess";>
+                </div>
+                <div class= form-group col-lg-6>
+                <a href="index.php" class="btn btn-warning" style="float:right" >Home Page</a>
+                </div>
                 </div>
             </div>
         </div>
     </form>
     </div>
-                            </div>
-                            </div>
-</body>
+                          
 <?php
-    $page_title = 'Home';
+   
     // header footer
-    //include 'include/footer.php';
+    include 'include/footer.php';
 ?>
