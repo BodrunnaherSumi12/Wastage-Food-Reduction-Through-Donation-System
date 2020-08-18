@@ -1,4 +1,10 @@
+<?php
+  include dirname(__FILE__).'/../database/database.php';
+  
+  $db = new Database();
 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

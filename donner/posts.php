@@ -2,7 +2,7 @@
     $page_title = 'Posts list';
     // header include
     include dirname(__FILE__). '/includes/header.php';
-    $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts` 
+    $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts`
             LEFT JOIN categories ON posts.category_id=categories.id 
             LEFT JOIN donners ON posts.donner_id=donners.id";
     $posts = $db->getData($query)
