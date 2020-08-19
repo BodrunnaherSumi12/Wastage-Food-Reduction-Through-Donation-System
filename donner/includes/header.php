@@ -1,7 +1,17 @@
 <?php
+ $page_title = 'Dashboard';
   include dirname(__FILE__).'/../database/database.php';
   
   $db = new Database();
+  if (isset($_SESSION['errors'])) {
+    $err = $_SESSION['errors'];
+    unset($_SESSION['errors']);
+}
+
+if (isset($_SESSION['success'])) {
+    $message = $_SESSION['success'];
+    unset($_SESSION['success']);
+}
 
 
 ?>
@@ -155,7 +165,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1><?php echo $page_title; ?></h1>
+          <h1><?php echo $page_title; ?></h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

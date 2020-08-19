@@ -5,7 +5,9 @@
     $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts`
             LEFT JOIN categories ON posts.category_id=categories.id 
             LEFT JOIN donners ON posts.donner_id=donners.id";
-    $posts = $db->getData($query)
+    $posts = $db->getData($query);
+
+    var_dump($query) ; die();
 ?>
 
     <div class="card">

@@ -1,5 +1,5 @@
 <?php
-    include dirname(__FILE__).'/../database/database.php';
+    include dirname(__FILE__).'/../../database/database.php';
     session_start();
     $db = new Database();
 
@@ -11,9 +11,9 @@
         $category = htmlspecialchars(trim($_POST['category']));
 
         if ($title && $content && $category) {
-            $admin_id = $_SESSION['admin_id'];
+            $donner_id = $_SESSION['donner_id'];
             // store Post
-            $query = "INSERT INTO posts (category_id, admin_id, title, content) VALUES('$category', '$admin_id', '$title', '$content')";
+            $query = "INSERT INTO posts (category_id, donner_id, title, content) VALUES('$category', '$donner_id', '$title', '$content')";
             $run = $db->store($query);
             
             if ($run) {

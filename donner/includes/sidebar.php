@@ -88,7 +88,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="(__FILE__). '/project/logout.php'" class="nav-link">
+          <a href="logout.php'" class="nav-link">
             <p>
               Logout
             </p>
