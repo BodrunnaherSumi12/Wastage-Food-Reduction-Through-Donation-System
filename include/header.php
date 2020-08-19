@@ -55,16 +55,14 @@ if(isset($_SESSION['old_data']))
     <ul class="clear">
       <li class="active"><a href="index.php">Home</a></li>
       <li><a href="#">Posts</a></li>
-      <li><a class="drop" href="#">Donations</a>
+      <li><a class="active" href="#">Donations</a>
         <ul>
           <li><a href="pages/gallery.html">Gallery</a></li>
           <li><a href="pages/full-width.html">Full Width</a></li>
-          <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-          <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-          <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+         
         </ul>
       </li>
-      <li><a class="drop" href="#">Registration</a>
+      <li><a class="active" href="#">Registration</a>
         <ul>
           <li><a href="user-register.php">Registration As Donner</a></li>
           <li><a href="user2-register.php">Registration As Receiver</a>

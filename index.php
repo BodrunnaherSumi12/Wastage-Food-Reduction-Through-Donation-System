@@ -25,24 +25,24 @@
     <section id="introblocks">
       <div class="sectiontitle">
         <h6 class="heading">Our Future Work</h6>
-        <p>Quisque commodo orci id convallis vestibulum justo convallis</p>
+        <p>We believe that every life matters and our passion is to see those we work with follow their heart, pursue their dreams, receive the love of the Father, and live life with purpose!</p>
       </div>
       <ul class="nospace group">
         <li class="one_third first">
           <article><i class="fa fa-futbol-o"></i>
-            <h6 class="heading font-x1"><a href="#">Tortor ultrices</a></h6>
-            <p>Aliquam lacus commodo sit amet dui quis placerat ac hendrerit massa etiam ultrices metus maximus [<a href="#">&hellip;</a>]</p>
+            <h6 class="heading font-x1"><a href="#">Orphanage Project</a></h6>
+            <p>Project Orphans will exists to provide care to orphans, vulnerable children, powerless young-women, and broken families located in Slum Area, Bangladesh. We will provide many different types of services to the communities we serve. At Project Orphans, we will take a long-term approach to what we do and go beyond simple involvement in the lives of the children and people we serve.<a href="#">&hellip;</a>]</p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-linode"></i>
-            <h6 class="heading font-x1"><a href="#">Vestibulum facilisis</a></h6>
+            <h6 class="heading font-x1"><a href="#">Education</a></h6>
             <p>Augue ante auctor elit in iaculis nibh arcu sit amet sem tellus sed ligula vestibulum dictum in [<a href="#">&hellip;</a>]</p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-s15"></i>
-            <h6 class="heading font-x1"><a href="#">Aliquet condimentum</a></h6>
+            <h6 class="heading font-x1"><a href="#">Free Health Service</a></h6>
             <p>Elit donec sodales varius dictum etiam sit amet elit metus sed ac ligula odio et placerat arcu sed [<a href="#">&hellip;</a>]</p>
           </article>
         </li>
@@ -126,8 +126,8 @@
   <section class="hoc container clear"> 
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Et ipsum suscipit sit amet</h6>
-      <p>Molestie dolor blandit mauris porta quam erat ut laoreet velit</p>
+      <h6 class="heading">Donner Posts</h6>
+      <p>All Donner Donations Posts Are Here</p>
     </div>
     <ul class="nospace group latest">
       <li class="one_half first">
