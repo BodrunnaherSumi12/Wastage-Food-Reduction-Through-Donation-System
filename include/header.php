@@ -55,7 +55,7 @@ if(isset($_SESSION['old_data']))
     <ul class="clear">
       <li class="active"><a href="index.php">Home</a></li>
       <li><a href="#">Posts</a></li>
-      <li><a class="active" href="#">Donations</a>
+      <li><a class="active" href="post.php">Donations</a>
         <ul>
           <li><a href="pages/gallery.html">Gallery</a></li>
           <li><a href="pages/full-width.html">Full Width</a></li>

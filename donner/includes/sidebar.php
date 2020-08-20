@@ -88,7 +88,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="logout.php'" class="nav-link">
+          <a href="logout.php" class="nav-link">
             <p>
               Logout
             </p>

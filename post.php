@@ -1,11 +1,16 @@
 <?php
     $page_title = 'Posts list';
+    include dirname(__FILE__).'/database/database.php';
+    session_start();
+    $db = new Database();
     // header include
-   // include dirname(__FILE__). '/includes/header.php';
-    $query = "SELECT posts.*, categories.name as category_name, admins.name as admin_name FROM `posts` 
+   // include dirname(__FILE__). '/header.php';
+    $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts`
             LEFT JOIN categories ON posts.category_id=categories.id 
-            LEFT JOIN admins ON posts.admin_id=admins.id";
-   // $posts = $db->getData($query)
+            LEFT JOIN donners ON posts.donner_id=donners.id";
+    $posts = $db->getData($query);
+    //$donner_id = $_SESSION['donner_id'];
+    //var_dump($query) ; die();
 ?>
 
     <div class="card">
@@ -38,8 +43,8 @@
                                        <td><?php echo $post['title']; ?></td>
                                        <td><?php echo $post['category_name']; ?></td>
                                        <td><?php echo $post['content']; ?></td>
-                                       <td><?php echo $post['admin_name']; ?></td>
-                                       <td><?php echo $post['created_at']; ?></td>
+                                       <td><?php echo $post['donner_name']; ?></td>
+                                       <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
                                        <td>
                                            <a href="">Edit</a>
                                            <a href="">Delete</a>
@@ -62,5 +67,5 @@
 
 <?php
     // footer include
-    include dirname(__FILE__). '/includes/footer.php';
+    include dirname(__FILE__). '/include/footer.php';
 ?>

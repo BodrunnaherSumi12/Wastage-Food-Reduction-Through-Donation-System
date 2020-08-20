@@ -39,6 +39,18 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="">Created By</label>
+                        <input type="text" name="donner_namr" class="form-control" placeholder="Enter Donner Name">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($err['donner_name'])) {
+                                    echo $err['donner_name'];
+                                }
+                            ?>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
                         <label for="">Content</label>
                         <textarea name="content" rows="5" class="form-control"></textarea>
                         <span class="text-danger">

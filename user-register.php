@@ -95,24 +95,24 @@
 
 
                     <div class="form-group">
-                        <label for="_name">City</label>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter City">
+                        <label for="_city">City</label>
+                        <input type="text" name="city" id="_address" class="demo-input-box" placeholder="Enter city">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['name'])) {
-                                    echo $err['name'];
+                                if(isset($err['city'])) {
+                                    echo $err['city'];
                                 }
                             ?>
                         </span>
                             </div>
 
                             <div class="form-group">
-                        <label for="_name">Town</label>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Town">
+                        <label for="_Town">Town</label>
+                        <input type="text" name="Town" id="_Town" class="demo-input-box" placeholder="Enter Town">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['name'])) {
-                                    echo $err['name'];
+                                if(isset($err['Town'])) {
+                                    echo $err['Town'];
                                 }
                             ?>
                         </span>
