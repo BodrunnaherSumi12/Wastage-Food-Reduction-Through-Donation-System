@@ -10,6 +10,7 @@
 
 
   <body>
+  <div class="container">
  
     <div class='col-md-6 offset-md-3' style= padding-top:50px;> 
         <table border ="1px" style="width:600px; line-height:35px; margin:20px;">
