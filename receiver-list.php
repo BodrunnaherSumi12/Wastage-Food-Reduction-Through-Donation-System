@@ -1,8 +1,8 @@
 <?php 
-   $page_title = 'Donners list';
+   $page_title = 'Receivers list';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
-  $query = "SELECT id,name,email,phone,address FROM donners";
+  $query = "SELECT id,name,email,phone,address FROM receivers";
     $posts = $db->getData($query);
   // ver_dump(query);
   // die();
@@ -14,7 +14,7 @@
     <div class='col-md-6 offset-md-3' style= padding-top:50px;> 
         <table border ="1px" style="width:600px; line-height:35px; margin:20px;">
             <tr>
-                <th colspan="11" style="text-align:center; background: #9D0552; color:white;"><h2>Registerd Donners</h2></th>
+                <th colspan="11" style="text-align:center; background: #9D0552; color:white;"><h2>Registerd Receivers</h2></th>
             </tr>
             <tr >
                 <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">ID</th>

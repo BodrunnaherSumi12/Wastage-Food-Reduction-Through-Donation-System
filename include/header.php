@@ -69,8 +69,8 @@ if(isset($_SESSION['old_data']))
           </li>
         </ul>
       </li>
-      <li><a href="#">Donners</a></li>
-      <li><a href="#">Receivers</a></li>
+      <li><a href="donner-list.php">Donners</a></li>
+      <li><a href="receiver-list.php">Receivers</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Log IN</a>
       <ul>
