@@ -18,7 +18,7 @@
             if ($run->num_rows > 0) {
                 $user = $run->fetch_assoc();
                 $_SESSION['username'] = $user['username'];
-                header('location:../index.php');
+                header('location:../receiver-index.php');
             } else {
                 $errors['username'] = "Invalid email or password"; 
                 $_SESSION['errors'] = $errors;
