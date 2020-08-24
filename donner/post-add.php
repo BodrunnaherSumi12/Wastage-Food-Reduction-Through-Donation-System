@@ -17,6 +17,7 @@
                 </div>
             </div>
             <div class="card-body">
+
                 <?php 
                     if (isset($message['success_message'])) {
                         echo '<div class="alert alert-success">'.$message['success_message'].'</div>';
@@ -49,6 +50,16 @@
                             ?>
                         </span>
                     </div>
+                  
+                    <div class="form-group">
+        <form action="file-submit.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image"> <br><br>
+            <button type="submit">Upload Image</button>
+        </form>
+    </div>
+
+
+
 
                     <div class="form-group">
                         <label for="">Content</label>

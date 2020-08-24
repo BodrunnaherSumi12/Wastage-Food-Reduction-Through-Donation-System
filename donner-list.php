@@ -9,54 +9,48 @@
 ?>
 
 
-  <body>
-  <div class="container">
-  <body>
-  <div class="card-deck">
- 
- <div class='col-md-6 offset-md-3' style= padding-top:50px; padding-down:50px;> 
- 
+<div class="container">
+       
+       <div class="card-header-action">
+          <!--<a href="post-add.php" class="btn btn-primary">Add new post</a>-->
+       </div>
+   </div>
+
+
+   <div class="card-columns">
    
+  
             <?php
                         if ($posts) {
                             while($post = $posts->fetch_assoc()) {
                                 ?>
 
-<div class="card mb-6" style="max-width: 640px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="..." class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"><?php echo $post['id']; ?></h5>
-        <p class="card-text"><?php echo $post['name']; ?></p>
-        <p class="card-text"><small class="text-muted"><?php echo $post['email']; ?></small></p>
-        <p class="card-text"><small class="text-muted"><?php echo $post['phone']; ?></small></p>
-        <p class="card-text"><small class="text-muted"><?php echo $post['address']; ?></small></p>
-
-      </div>
-    </div>
-  </div>
-</div>
 
 
-                    
-                                <?php
+                                <div class="card bg-dark text-white">
+                                <img class="card-img" src="..." alt="Card image">
+                                    <div class="card-body">
+                                    <h5 class="card-title"><?php echo $post['id']; ?></h5>
+                                    <h6 class="card-text"><?php echo $post['name']; ?></h6>
+                                    <p class="card-text"><?php echo $post['email']?></p>
+                                    <p class="card-text"><?php echo $post['phone']?></p>
+                                    <p class="card-text"><?php echo $post['address']?></p>
+                                 </div>
+                                </div>
+                    <?php
                             }
                         } else {
-                            ?>
-                            <tr>
-                                <td>No Data Found</td>
-                            </tr>
+                     ?>
+                            <div>
+                                <td>No Post found</td>
+                            </div>
                         <?php
                         }
-                    ?>
-           
-        </table>
+                        ?>
+                    
+                         
     </div>
-    
-  </body>
+  </div>
   <?php
     $page_title = 'Home';
     // header footer
