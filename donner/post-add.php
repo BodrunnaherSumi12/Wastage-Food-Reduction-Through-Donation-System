@@ -3,6 +3,11 @@
     // header include
     include dirname(__FILE__). '/includes/header.php';
 
+    if (isset($_SESSION['file_errors'])) {
+        $file_err = $_SESSION['file_errors'];
+        unset($_SESSION['file_errors']);
+    }
+
     $query = "SELECT * FROM categories";
     $categories = $db->getData($query);
 ?>
@@ -26,7 +31,7 @@
                         echo '<div class="alert alert-danger">'.$message['error_message'].'</div>';
                     }
                 ?>
-                <form action="submit/post-add-submit.php" method="POST">
+                <form action="submit/post-add-submit.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Title</label>
                         <input type="text" name="title" class="form-control" placeholder="Enter post title">
@@ -44,19 +49,27 @@
                         <input type="text" name="donner_namr" class="form-control" placeholder="Enter Donner Name">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['donner_name'])) {
-                                    echo $err['donner_name'];
+                                if(isset($file_err)) {
+                                    echo implode(' | ', $file_err);
+                                }
+                                if(isset($err['file_error'])) {
+                                    $err['file_error']
                                 }
                             ?>
                         </span>
                     </div>
                   
                     <div class="form-group">
-        <form action="file-submit.php" method="POST" enctype="multipart/form-data">
-            <input type="file" name="image"> <br><br>
-            <button type="submit">Upload Image</button>
-        </form>
-    </div>
+                        <label for="">Upload Image</label><br>
+                        <input type="file" name="image" class="form-control">
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($err['donner_name'])) {
+                                    echo $err['donner_name'];
+                                }
+                            ?>
+                        </span>
+                    </div>
 
 
 

@@ -1,4 +1,5 @@
 <?php
+    $file_errors=[];
     include dirname(__FILE__).'/../../database/database.php';
     session_start();
     $db = new Database();
@@ -10,41 +11,47 @@
         $content = htmlspecialchars(trim($_POST['content']));
         $category = htmlspecialchars(trim($_POST['category']));
 
-        if (isset($_FILES['image'])) {
-            $file_name = $_FILES['image']['name'];
-            $tmp_name = $_FILES['image']['tmp_name'];
-            $file_size = $_FILES['image']['size'];
-            $allow = ['jpg', 'png', 'jpeg', 'gif'];
-    
-            //extension
-            $div = explode('.', $file_name);
-            $ext = strtolower(end($div));
-    
-
         if ($title && $content && $category) {
             $donner_id = $_SESSION['donner_id'];
-
+            $file_rename = ''; 
+            
+            if (isset($_FILES['image'])) {
+                $file_name = $_FILES['image']['name'];
+                $tmp_name = $_FILES['image']['tmp_name'];
+                $file_size = $_FILES['image']['size'];
+                $allow = ['jpg', 'png', 'jpeg', 'gif'];
+        
+                //extension
+                $div = explode('.', $file_name);
+                $ext = strtolower(end($div));
 
             
                //check extension
-        if (!in_array($ext, $allow)) {
-            echo 'File must be the following type: '. implode(', ', $allow);
-        } else if ($file_size > (1024*30)) {
-            echo "File size should be more than 30KB";
-        } else {
-            $new_name = substr(md5(time()), 0, 10).'.'.$ext;
-            $upload_directory = 'uploads/'.$new_name;
+                if (!in_array($ext, $allow)) {
+                    $file_errors[] = 'File must be the following type: '. implode(', ', $allow);
+                }
+                
+                if ($file_size > (1024*30)) {
+                    $file_errors[] = "File size should be more than 30KB";
+                } 
+                
+                if (empty($file_errors)) {
+                    $file_rename = substr(md5(time()), 0, 10).'.'.$ext;
+                    $upload_directory = '../uploads/'. $file_rename;
 
-            if (move_uploaded_file($tmp_name, $upload_directory)) {
-                echo "Uploaded successfully";
+                    if (!move_uploaded_file($tmp_name, $upload_directory)) {
+                        $_SESSION['file_errors'] = ['Faled to upload file'];
+                        header('location:../post-add.php');
+                    }
+                } else {
+                    $_SESSION['file_errors'] = $file_errors;
+                    header('location:../post-add.php');
+                }
             }
-        }
-        
-    }
 
     
             // store Post
-            $query = "INSERT INTO posts (category_id, donner_id, title, content) VALUES('$category', '$donner_id', '$title', '$content')";
+            $query = "INSERT INTO posts (category_id, donner_id, title, content, photo) VALUES('$category', '$donner_id', '$title', '$content', '$file_rename')";
             $run = $db->store($query);
             
             if ($run) {
@@ -69,6 +76,14 @@
             if (empty($category)) {
                 $errors['category'] = "Category field can not be empty";            
             }
+            
+            if (empty($_FILES['image']['name'])) {
+                $errors['file_error'] = "Please select an image"; 
+            }
+   
+   
+         
+       
 
 
             $_SESSION['errors'] = $errors;

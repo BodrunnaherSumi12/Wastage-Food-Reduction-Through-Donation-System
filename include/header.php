@@ -54,8 +54,15 @@ if(isset($_SESSION['old_data']))
     <!-- ################################################################################################ -->
     <ul class="clear">
       <li class="active"><a href="index.php">Home</a></li>
-      <li><a href="#">Posts</a></li>
-      <li><a class="active" href="post.php">Donations</a></li>
+      <li><a href="post.php">Posts</a></li>
+      <li><a class="active" href="">Donate</a>
+      <ul>
+          <li><a href="food-donate.php">Donate Now</a></li>
+          <li><a href="">Donate Money</a> </li>
+          <li><a href="donations.php">Donate Clearification</a> </li>
+        </ul>
+      </li>
+
       <li><a class="active" href="#">Registration</a>
         <ul>
           <li><a href="user-register.php">Registration As Donner</a></li>
