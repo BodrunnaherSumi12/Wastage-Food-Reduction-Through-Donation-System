@@ -29,7 +29,7 @@
 
 
                               <div class="card">
-                                <img class="card-img-top" src="..." alt="Card image cap" >
+                                <img class="card-img-top" src="uploads"alt="Card image cap" ><?php echo $post['photo']; ?></img> 
                                  <div class="card-body">
                                     <h5 class="card-title"><?php echo $post['title']; ?></h5>
                                     <h6 class="card-text"><?php echo $post['category_name']; ?></h6>

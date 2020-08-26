@@ -49,12 +49,12 @@
                         <input type="text" name="donner_namr" class="form-control" placeholder="Enter Donner Name">
                         <span class="text-danger">
                             <?php 
-                                if(isset($file_err)) {
+                            /*  if(isset($file_err)) {
                                     echo implode(' | ', $file_err);
                                 }
-                                if(isset($err['file_error'])) {
-                                    $err['file_error']
-                                }
+                               // if(isset($err['file_error'])) {
+                                    $err['file_error'];
+                                } */
                             ?>
                         </span>
                     </div>
@@ -64,9 +64,12 @@
                         <input type="file" name="image" class="form-control">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['donner_name'])) {
-                                    echo $err['donner_name'];
-                                }
+                               if(isset($file_err)) {
+                                echo implode(' | ', $file_err);
+                            }
+                            if(isset($err['file_error'])) {
+                                $err['file_error'];
+                            }
                             ?>
                         </span>
                     </div>

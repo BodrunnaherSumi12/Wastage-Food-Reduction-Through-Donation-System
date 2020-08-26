@@ -25,7 +25,8 @@
                         <th>Title</th>
                         <th>Category</th>
                         <th>Content</th>
-                        <th>Created By</th>
+                        <th>Photo</th>
+                        <th>Image</th>
                         <th>Created At</th>
                         <th>Action</th>
                     </tr>
@@ -40,11 +41,12 @@
                                        <td><?php echo $post['title']; ?></td>
                                        <td><?php echo $post['category_name']; ?></td>
                                        <td><?php echo $post['content']; ?></td>
-                                       <td><?php echo $post['donner_name']; ?></td>
+                                       <td><?php echo $post['photo']; ?></td>
+                                       <td><img src="uploads/?php echo $post['donner_name']; ?>"></td>
                                        <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
                                        <td>
                                            <a href="">Edit</a>
-                                           <a href="">Delete</a>
+                                           <a href="post-delete.php?delete=<?php echo $post['id']; ?>">Delete</a>
                                        </td>
                                     </tr>
                                 <?php
