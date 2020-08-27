@@ -12,7 +12,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Post list</h3>
+            <h3 class="card-title">Post list</h3><br>
             <div class="card-header-action">
                 <a href="post-add.php" class="btn btn-primary">Add new post</a>
             </div>
@@ -25,7 +25,6 @@
                         <th>Title</th>
                         <th>Category</th>
                         <th>Content</th>
-                        <th>Photo</th>
                         <th>Image</th>
                         <th>Created At</th>
                         <th>Action</th>
@@ -41,12 +40,13 @@
                                        <td><?php echo $post['title']; ?></td>
                                        <td><?php echo $post['category_name']; ?></td>
                                        <td><?php echo $post['content']; ?></td>
-                                       <td><?php echo $post['photo']; ?></td>
-                                       <td><img src="uploads/?php echo $post['donner_name']; ?>"></td>
+                                       
+                                       <td><img src="uploads/<?php echo $post['photo']; ?>"></td>
                                        <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
                                        <td>
-                                           <a href="">Edit</a>
-                                           <a href="post-delete.php?delete=<?php echo $post['id']; ?>">Delete</a>
+                                           <a  class="fa fa-edit" href="">Edit</a>
+                                           <a class="fa fa-trash" href="post-delete.php?delete=<?php echo $post['id']; ?>">Delete</a>
+                                           
                                        </td>
                                     </tr>
                                 <?php

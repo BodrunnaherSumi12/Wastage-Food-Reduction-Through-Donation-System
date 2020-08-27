@@ -5,6 +5,7 @@
         $errors = $_SESSION['errors'];
         unset($_SESSION['errors']);
     }
+   // var_dump($errors) ; die();
 ?>
 
 

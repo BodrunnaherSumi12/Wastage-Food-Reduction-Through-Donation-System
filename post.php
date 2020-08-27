@@ -22,14 +22,14 @@
         </div>
         <div class="card-columns">
         
-                    <?php
-                        if ($posts) {
-                            while($post = $posts->fetch_assoc()) {
-                                ?>
+           <?php
+               if ($posts) {
+              while($post = $posts->fetch_assoc()) {
+            ?>
 
 
                               <div class="card">
-                                <img class="card-img-top" src="uploads"alt="Card image cap" ><?php echo $post['photo']; ?></img> 
+                                <img class="card-img-top" src="donner/uploads/<?php echo $post['photo']; ?>"alt="Card image cap"></img> 
                                  <div class="card-body">
                                     <h5 class="card-title"><?php echo $post['title']; ?></h5>
                                     <h6 class="card-text"><?php echo $post['category_name']; ?></h6>
@@ -49,8 +49,7 @@
                         <?php
                         }
                     ?>
-                </tbody>
-            </table>
+                
         </div>
     </div>
 

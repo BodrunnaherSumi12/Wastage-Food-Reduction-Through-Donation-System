@@ -100,11 +100,11 @@
                      <div class="row">
                     <div class="form-group col-lg-6">
                         <label for="_name">City</label><br>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Name">
+                        <input type="text" name="city" id="_city" class="demo-input-box" placeholder="Enter city">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['name'])) {
-                                    echo $err['name'];
+                                if(isset($err['city'])) {
+                                    echo $err['city'];
                                 }
                             ?>
                         </span>
@@ -112,11 +112,11 @@
 
                             <div class="form-group col-lg-6">
                         <label for="_name">Town</label><br>
-                        <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Name">
+                        <input type="text" name="town" id="_town" class="demo-input-box" placeholder="Enter town">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['name'])) {
-                                    echo $err['name'];
+                                if(isset($err['town'])) {
+                                    echo $err['town'];
                                 }
                             ?>
                         </span>
