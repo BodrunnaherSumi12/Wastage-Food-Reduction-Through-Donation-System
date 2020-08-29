@@ -39,7 +39,7 @@
           </div>
         <div class="form-group col-md-6">
            <label for="inputPassword4">Date</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="date" class="form-control" id="inputPassword4">
          </div>
         </div>
 

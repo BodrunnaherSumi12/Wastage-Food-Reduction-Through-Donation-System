@@ -44,7 +44,7 @@
                                        <td><img src="uploads/<?php echo $post['photo']; ?>"></td>
                                        <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
                                        <td>
-                                           <a  class="fa fa-edit" href="">Edit</a>
+                                           <a  class="fa fa-edit" href="edit-post.php?edit=<?php echo $post['id']; ?>">Edit</a>
                                            <a class="fa fa-trash" href="post-delete.php?delete=<?php echo $post['id']; ?>">Delete</a>
                                            
                                        </td>

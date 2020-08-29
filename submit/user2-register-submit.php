@@ -14,8 +14,8 @@
         $password = $_POST['password'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
-        $City = $_POST['City'];
-        $Town = $_POST['Town'];
+        $City = $_POST['city'];
+        $Town = $_POST['town'];
 
         if ($name && $email && $username && $password) {
             // unique validation
@@ -69,6 +69,13 @@
             if (empty($password)) {
                 $errors['password'] = "Password field can not be empty";
             }
+            if (empty($phone)) {
+                $errors['phone'] = "Phone field can not be empty";
+            }
+            if (empty($address)) {
+                $errors['address'] = "address field can not be empty";
+            }
+
 
             $_SESSION['errors'] = $errors;
             header('location:../user2-register.php');

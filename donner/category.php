@@ -31,8 +31,8 @@
                                         <td><?php echo $category['id'] ?></td>
                                         <td><?php echo $category['name'] ?></td>
                                         <td>
-                                            <a href="edit-category.php?edit=<?php echo $category['id']; ?>">Edit</a>
-                                            <a href="delete.php?delete=<?php echo $category['id']; ?>">Delete</a>
+                                            <a class="fa fa-edit" href="edit-category.php?edit=<?php echo $category['id']; ?>">Edit</a>
+                                            <a class="fa fa-trash" href="delete.php?delete=<?php echo $category['id']; ?>">Delete</a>
                                         </td>
                                     </tr>
                                 <?php

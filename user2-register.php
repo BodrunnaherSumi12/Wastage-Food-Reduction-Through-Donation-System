@@ -3,13 +3,25 @@
    // header include
    include 'include/header.php';
 ?>
+<?php
+    $conn = new mysqli('localhost', 'root', '', 'project');
+
+    if ($conn->connect_error) {
+        die('database connection failed');
+    }
+
+    $query = "SELECT * FROM divisions ORDER BY name ASC";
+    $run = $conn->query($query);
+?>
 
 
 
-    <div class="container">
+ <div class="container">
+           <link rel="stylesheet" href="./assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+     <form action="submit/user2-register-submit.php" method="POST" style="padding-top:50px;">
+       <div class="card-header">Receiver Registration </div>
 
-<form action="submit/user2-register-submit.php" method="POST" style="padding-top:50px;">
-<div class="card-header">Receiver Registration </div>
+      
         <div class="card-body " style="background-color:#DCDCDC">
         
             
@@ -99,35 +111,82 @@
                     </div>
                      <div class="row">
                     <div class="form-group col-lg-6">
-                        <label for="_name">City</label><br>
-                        <input type="text" name="city" id="_city" class="demo-input-box" placeholder="Enter city">
+                    <div class="form-group">
+                                <label for="">Division</label>
+                                <select name="division"  class="form-control" id="division">
+                                    <option value="">Select Division</option>
+                                    <?php 
+                                        if ($run->num_rows > 0) {
+                                            while($division = $run->fetch_assoc()) {
+                                                ?>
+                                                    <option value="<?php echo $division['id']; ?>"><?php echo $division['name']; ?></option>
+                                                <?php
+                                            }
+                                        }
+                                    ?>
+                                </select>
+                            </div>
                         <span class="text-danger">
-                            <?php 
-                                if(isset($err['city'])) {
-                                    echo $err['city'];
-                                }
-                            ?>
+                         
                         </span>
                             </div>
 
                             <div class="form-group col-lg-6">
-                        <label for="_name">Town</label><br>
-                        <input type="text" name="town" id="_town" class="demo-input-box" placeholder="Enter town">
+                            <div class="form-group">
+                                <label for="">District</label>
+                                <select name="district" id="district"  class="form-control">
+                                    <option value="">Select District</option>
+                                </select>
+                            </div>
+                        <span class="text-danger">
+                          
+                        </span>
+                            </div>
+                            </div>
+                     
+                            <div class="row">
+
+
+                            <div class="form-group col-lg-6">
+                            <div class="form-group">
+                            <label for="">Upazilla</label>
+                                <select name="upazilla"  id="upazilla" class="form-control">
+                                    <option value="">Select Upazila</option>
+                                </select>
+                            </div>
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['town'])) {
-                                    echo $err['town'];
+                                if(isset($err['upazilla'])) {
+                                    echo $err['upazilla'];
                                 }
                             ?>
                         </span>
                             </div>
+
+                            
+                            <div class="form-group col-lg-6">
+                            <div class="form-group">
+                            <label for="">Union</label>
+                                <select name="union" id="union" class="form-control" >
+                                    <option value="">Select Union</option>
+                                </select>
+                            </div>
+                        <span class="text-danger">
+                            <?php 
+                                if(isset($err['union'])) {
+                                    echo $err['union'];
+                                }
+                            ?>
+                        </span>
                             </div>
 
+
+
+                            </div>
+
+
+
             <div class="field-column">
-                <div class="terms">
-                    <input type="checkbox" name="terms"> I accept terms
-                    and conditions
-                </div>
                 <div class="row">
                 <div class= form-group col-lg-6>
                
@@ -141,11 +200,18 @@
                 </div>
             </div>
         </div>
+        </div>
     </form>
+
+    <div id="output"></div>
+    
     </div>
-                          
+
+    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/ajax.js"></script>                    
 <?php
-   
+    
     // header footer
     include 'include/footer.php';
 ?>
