@@ -3,16 +3,17 @@
     
     //include 'database/database.php';
     include 'include/header.php';
-    include 'include/_sidebar.php';
      $db = new Database();
 
     if(isset($_GET['edit'])){
-        $id=$_GET['edit'];
+        $receiver_id=$_GET['edit'];
         
-        $sql = "SELECT * from receivers WHERE id=$id";
+        $sql = "SELECT * FROM receivers WHERE id='$receiver_id'";
         $run  = $db->conn->query($sql);
-       // $data = $run->fetch_assoc();   
+        $data = $run->fetch_assoc();
     }
+    
+    include 'include/_sidebar.php';
     if (isset($_SESSION['old_data'])) 
     {
         $data = $_SESSION['old_data'];
@@ -42,8 +43,8 @@
                       <div class="form-group col-lg-6">
                         <label for="_name">Name</label><br>
                         <input type="text" name="name" id="_name" class="demo-input-box" value="<?php 
-                                    if(isset($data['name'])) 
-                                    {
+                                        if(isset($data['name'])) 
+                                        {
                                         echo $data['name'];
                                     }
                                 ?>" placeholder="Enter Name">

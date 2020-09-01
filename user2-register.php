@@ -12,13 +12,18 @@
 
     $query = "SELECT * FROM divisions ORDER BY name ASC";
     $run = $conn->query($query);
+
+    if (isset($_SESSION['file_errors'])) {
+        $file_err = $_SESSION['file_errors'];
+        unset($_SESSION['file_errors']);
+    }
 ?>
 
 
 
  <div class="container">
            <link rel="stylesheet" href="./assets/plugins/bootstrap/dist/css/bootstrap.min.css">
-     <form action="submit/user2-register-submit.php" method="POST" style="padding-top:50px;">
+     <form action="submit/user2-register-submit.php" method="POST" enctype="multipart/form-data" style="padding-top:50px;">
        <div class="card-header">Receiver Registration </div>
 
       
@@ -84,6 +89,7 @@
                         </span>
                     </div>
                     </div>
+
                     <div class="row">
                     <div class="form-group col-lg-6">
                         <label for="_phone">Phone</label><br>
@@ -96,6 +102,7 @@
                             ?>
                         </span>
                     </div>
+
                     <div class="form-group col-lg-6">
                         <label for="_address">Address</label><br>
                         <input type="text" name="address" id="_address" class="demo-input-box" placeholder="Enter Address">
@@ -109,6 +116,22 @@
                     </div>
 
                     </div>
+
+                    <div class="form-group col-lg-12">
+                        <label for="">Upload Image</label><br>
+                        <input type="file" name="image" class="form-control">
+                        <span class="text-danger">
+                            <?php 
+                               if(isset($file_err)) {
+                                echo implode(' | ', $file_err);
+                            }
+                            if(isset($err['file_error'])) {
+                                $err['file_error'];
+                            }
+                            ?>
+                        </span>
+                    </div>
+
                      <div class="row">
                     <div class="form-group col-lg-6">
                     <div class="form-group">
@@ -183,33 +206,26 @@
 
 
                             </div>
+                           
 
 
-
-            <div class="field-column">
-                <div class="row">
-                <div class= form-group col-lg-6>
+                          <div class="field-column">
+                             <div class="row">
+                              <div class= "form-group col-lg-6">
                
-                <input type="submit"
-                        name="register_form" value="Register"
-                        class="btn btn-succeess";>
-                </div>
-                <div class= form-group col-lg-6>
-                <a href="index.php" class="btn btn-warning" style="float:right" >Home Page</a>
-                </div>
-                </div>
-            </div>
-        </div>
-        </div>
+                                   <input type="submit"
+                                       name="register_form" value="Register"
+                                        class="btn btn-succeess";>
+                               </div>
+                            <div class= "form-group col-lg-6">
+                                     <a href="index.php" class="btn btn-warning" style="float:right" >Home Page</a>
+                             </div>
+                           </div>
+                         </div>
+                  </div>
+         </div>
     </form>
-
-    <div id="output"></div>
-    
-    </div>
-
-    <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
-    <script src="assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/ajax.js"></script>                    
+    </div>                 
 <?php
     
     // header footer

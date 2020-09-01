@@ -27,6 +27,7 @@ $(document).ready(function () {
                 $('#union').html('<option>Select Union</option>');
             },
             success: function (res) {
+                console.log(res);
                 $('#upazilla').html(res);
             }
         });

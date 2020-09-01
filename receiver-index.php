@@ -2,9 +2,9 @@
     $page_title = 'Home';
     // header include
     include 'include/header.php';
-?>
-<?php
-    $page_title = 'Home';
+    if (isset($_SESSION['user_id'])) {
+      $id = $_SESSION['user_id'];
+    }
     // header include
     include 'include/_sidebar.php';
 ?>

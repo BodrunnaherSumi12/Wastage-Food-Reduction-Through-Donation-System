@@ -1,3 +1,4 @@
+
 <?php
     $file_errors=[];
     include dirname(__FILE__).'/../../database/database.php';

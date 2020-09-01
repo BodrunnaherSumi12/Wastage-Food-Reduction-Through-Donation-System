@@ -1,4 +1,4 @@
-<?php
+ <?php
    $page_title = 'Home';
    // header include
    include 'include/header.php';
@@ -12,23 +12,19 @@
 
     $query = "SELECT * FROM divisions ORDER BY name ASC";
     $run = $conn->query($query);
-
-    if (isset($_SESSION['file_errors'])) {
-        $file_err = $_SESSION['file_errors'];
-        unset($_SESSION['file_errors']);
-    }
 ?>
 
-<div class="container">
+
+
+ <div class="container">
            <link rel="stylesheet" href="./assets/plugins/bootstrap/dist/css/bootstrap.min.css">
-           <form action="submit/user-register-submit.php" method="POST" enctype="multipart/form-data" style="padding-top:50px;">
-       <div class="card-header">Donner Registration Form </div>
+     <form action="submit/user2-register-submit.php" method="POST" style="padding-top:50px;">
+       <div class="card-header">Receiver Registration </div>
 
       
         <div class="card-body " style="background-color:#DCDCDC">
-
-
-             
+        
+            
         <?php 
             if (isset($message['success_message'])) {
                 echo '<div class="alert alert-success">'.$message['success_message'].'</div>';
@@ -39,7 +35,7 @@
             
             ?>
 
-  <div class="row">
+                    <div class="row">
                       <div class="form-group col-lg-6">
                         <label for="_name">Name</label><br>
                         <input type="text" name="name" id="_name" class="demo-input-box" placeholder="Enter Name">
@@ -113,23 +109,6 @@
                     </div>
 
                     </div>
-
-                    <div class="form-group col-lg-12">
-                        <label for="">Upload Image</label><br>
-                        <input type="file" name="image" class="form-control">
-                        <span class="text-danger">
-                            <?php 
-                               if(isset($file_err)) {
-                                echo implode(' | ', $file_err);
-                            }
-                            if(isset($err['file_error'])) {
-                                $err['file_error'];
-                            }
-                            ?>
-                        </span>
-                    </div>
-
-
                      <div class="row">
                     <div class="form-group col-lg-6">
                     <div class="form-group">
@@ -224,11 +203,8 @@
          </div>
     </form>
     </div>                 
-
-    
-
 <?php
-    $page_title = 'Home';
+    
     // header footer
     include 'include/footer.php';
 ?>

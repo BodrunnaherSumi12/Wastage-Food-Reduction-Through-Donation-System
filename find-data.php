@@ -32,7 +32,7 @@
             $output .= '<option value="">Select Upazilla</option>';
 
             while($upazila = $run->fetch_assoc()){
-                $output .= '<option value="'.$upazilla['id'].'">'.$upazilla['name'].'</option>';
+                $output .= '<option value="'.$upazila['id'].'">'.$upazila['name'].'</option>';
             }
         } else {
             $output .= '<option value="">No Upazilla Found</option>';

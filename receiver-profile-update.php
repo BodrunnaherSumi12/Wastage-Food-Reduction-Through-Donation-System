@@ -19,12 +19,16 @@
         $password = $_POST['password'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
-        $City = $_POST['City'];
-        $Town = $_POST['Town'];
+       // $division = $_POST['division'];
+       // $district = $_POST['district'];
+       // $upazilla = $_POST['upazilla'];
+       // $union = $_POST['union'];
        
-        if(!empty($name) && !empty($email) && !empty($username) && !empty($password) && !empty($phone) && !empty($addrress) && !empty($city) && !empty($town)){
-        
-	        $sql = "UPDATE receivers SET name='$name',email='$email',username='$username',password='$password',phone='$phone',address='$address',city='$city',town='$town' where id='$id' ";
+        if(!empty($name) && !empty($email) && !empty($username) && !empty($password) && !empty($phone) && !empty($addrress) /*&& !empty($division) && !empty($district) && !empty($upazilla) && !empty($union)*/){
+
+           /* $sql = "UPDATE receivers SET name='$name',email='$email',username='$username',password='$password',phone='$phone',address='$address',division_id='$division',district_id='$district',upazilla_id='$upazilla',union_id='$union'where id='$id' ";*/
+
+	      $sql = "UPDATE receivers SET `name`='$name',`email`='$email',`username`='$username',`password`='$password',`phone`='$phone',`address`='$address' where `id`='$id' ";
             $result = $db->conn->query($sql);
             var_dump($result) ; die();
 

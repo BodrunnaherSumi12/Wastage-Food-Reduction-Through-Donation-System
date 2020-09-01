@@ -29,8 +29,9 @@
 
 
                               <div class="card">
-                                <img class="card-img-top" src="donner/uploads/<?php echo $post['photo']; ?>"alt="Card image cap"></img> 
+                                
                                  <div class="card-body">
+                                 <img class="img-fluid rounded-circle w-50 mb-3" src="donner/uploads/<?php echo $post['photo']; ?>"alt="Card image cap"></img> 
                                     <h5 class="card-title"><?php echo $post['title']; ?></h5>
                                     <h6 class="card-text"><?php echo $post['category_name']; ?></h6>
                                     <p class="card-text"><?php echo $post['content']?></p>
