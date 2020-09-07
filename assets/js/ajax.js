@@ -8,12 +8,25 @@ $(document).ready(function () {
             method: 'POST',
             data: {division_id:division},
             beforeSend: function () {
-                $('#upazilla').html('<option>Select Upazilla</option>');
+                $('#upazilla').html('<option>Select District</option>');
             },
             success: function (res) {
                 $('#district').html(res);
             }
         });
+
+        if ($('#receiverList').length > 0) {
+            $.ajax("find-receiver.php", {
+                method: 'POST',
+                data: {division_id:division},
+                beforeSend: function () {
+                    $('#receiverList').html('<option>Select Receiver</option>');
+                },
+                success: function (res) {
+                    $('#receiverList').html(res);
+                }
+            });
+        }
     });
 
     // district 
@@ -27,10 +40,23 @@ $(document).ready(function () {
                 $('#union').html('<option>Select Union</option>');
             },
             success: function (res) {
-                console.log(res);
                 $('#upazilla').html(res);
+                console.log($('#receiverList').length);
             }
         });
+
+        if ($('#receiverList').length > 0) {
+            $.ajax("find-receiver.php", {
+                method: 'POST',
+                data: {district_id:district},
+                beforeSend: function () {
+                    $('#receiverList').html('<option>Select Receiver</option>');
+                },
+                success: function (res) {
+                    $('#receiverList').html(res);
+                }
+            });
+        }
     });
 
      // Upazilla 
@@ -45,6 +71,19 @@ $(document).ready(function () {
                 $('#union').html(res);
             }
         });
+
+        if ($('#receiverList').length > 0) {
+            $.ajax("find-receiver.php", {
+                method: 'POST',
+                data: {upazilla_id:upazilla},
+                beforeSend: function () {
+                    $('#receiverList').html('<option>Select Receiver</option>');
+                },
+                success: function (res) {
+                    $('#receiverList').html(res);
+                }
+            });
+        }
     });
 
 

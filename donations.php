@@ -4,6 +4,8 @@
 ?>
 
 <div class=container>
+<form action="submit/user2-register-submit.php" method="POST" enctype="multipart/form-data" style="padding-top:50px;">
+
    <div class="card">
 
          <div class="card-header text-center">
@@ -102,6 +104,7 @@
 
 
     </div>
+    </form>
 </div>
 
 <?php

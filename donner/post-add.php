@@ -44,7 +44,7 @@
                         </span>
                     </div>
 
-                    <div class="form-group">
+                  <!--<div class="form-group">
                         <label for="">Created By</label>
                         <input type="text" name="donner_namr" class="form-control" placeholder="Enter Donner Name">
                         <span class="text-danger">
@@ -57,7 +57,7 @@
                                 } */
                             ?>
                         </span>
-                    </div>
+                    </div>-->
                   
                     <div class="form-group">
                         <label for="">Upload Image</label><br>

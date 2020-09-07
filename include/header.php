@@ -58,7 +58,7 @@ if(isset($_SESSION['old_data']))
       <li><a class="active" href="">Donate</a>
       <ul>
           <li><a href="food-donate.php">Donate Now</a></li>
-          <li><a href="">Donate Money</a> </li>
+         
           <li><a href="donations.php">Donate Clearification</a> </li>
         </ul>
       </li>
@@ -72,8 +72,36 @@ if(isset($_SESSION['old_data']))
       </li>
       <li><a href="donner-list.php">Donners</a></li>
       <li><a href="receiver-list.php">Receivers</a></li>
-      <li><a href="about.php">About</a></li>
-      <li><a href="#">Log IN</a>
+      <li><a href="#">About</a>
+      <ul>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a>
+          </li>
+        </ul>
+      </li>
+      </li>
+      <?php 
+    if (isset($_SESSION['id'])) {
+        ?>
+           <li><a href="#">Logged In (<?php  echo  $_SESSION['username']; ?>)</a>
+           <ul><li><a href="logout.php">Log Out</a></li></ul>
+           </li>
+           
+        <?php
+    } else {
+        ?>
+            <li><a href="enter your login page link">Log In</a>
+            <ul>
+         <li><a href="Admin/login.php">Log In As Admin</a></li>
+          <li><a href="donner_login.php">Log In As Donner</a></li>
+          <li><a href="receiver-login.php">Log In As Receiver</a>
+          </li>
+        </ul>
+            </li>
+        <?php
+    }
+?>
+     
       <ul>
          <li><a href="Admin/login.php">Log In As Admin</a></li>
           <li><a href="donner_login.php">Log In As Donner</a></li>

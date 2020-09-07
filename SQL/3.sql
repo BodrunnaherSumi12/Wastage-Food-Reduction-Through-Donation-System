@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2020 at 01:56 PM
+-- Generation Time: Sep 01, 2020 at 03:26 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -183,36 +183,6 @@ INSERT INTO `divisions` (`id`, `name`, `bn_name`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donations`
---
-
-CREATE TABLE `donations` (
-  `id` int(11) NOT NULL,
-  `food_amount` varchar(100) NOT NULL,
-  `food_type` varchar(100) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `photo` varchar(150) DEFAULT NULL,
-  `division` varchar(150) NOT NULL,
-  `district` varchar(150) NOT NULL,
-  `upazilla` varchar(150) NOT NULL,
-  `union` varchar(150) NOT NULL,
-  `receiver` varchar(150) NOT NULL,
-  `content` varchar(200) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `donations`
---
-
-INSERT INTO `donations` (`id`, `food_amount`, `food_type`, `name`, `photo`, `division`, `district`, `upazilla`, `union`, `receiver`, `content`, `created_at`) VALUES
-(1, '', '', '', '8c4db3ef84.jpg', '', '', '', '', '', '', '2020-09-07 11:52:09'),
-(2, '', '', '', '', '', '', '', '', '', '', '2020-09-07 11:59:48'),
-(3, '', '', '', '', '', '', '', '', '', '', '2020-09-07 12:00:19');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `donners`
 --
 
@@ -256,38 +226,17 @@ CREATE TABLE `posts` (
   `title` varchar(200) NOT NULL,
   `content` text NOT NULL,
   `photo` varchar(30) DEFAULT NULL,
-  `created_at` datetime DEFAULT current_timestamp(),
-  `status` varchar(100) NOT NULL DEFAULT '0'
+  `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `category_id`, `donner_id`, `title`, `content`, `photo`, `created_at`, `status`) VALUES
-(4, 7, 0, 'Our Edu', '   Moreover, if the proposal gets approved, then scholarship payments for these examinations will not be.', '67ff2d32ea.jpg', '2020-08-26 16:31:05', '0'),
-(5, 3, 0, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', '2020-08-26 16:49:06', '0'),
-(6, 2, 9, 'Bangladesh', 'Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.', '9024c997d9.jpg', '2020-08-26 16:58:31', '0'),
-(9, 2, 0, 'food Organization', 'food for all', 'b9c05f9c88.jpg', '2020-09-05 12:41:48', '0'),
-(10, 2, 0, 'FOOOD', 'Plese distribute this food to ta needed people', '', '2020-09-05 12:54:49', '0'),
-(11, 3, 0, 'FOOOD', 'ghfghfhgfghhhhhhhf', 'a8c2f3e4e0.jpg', '2020-09-05 13:38:00', '0'),
-(12, 3, 0, 'hjhjjj', 'jhgjgjg', '70751b10f7.jpg', '2020-09-05 14:15:02', '0'),
-(13, 7, 0, 'ggoooll', 'gqawesfgu', '', '2020-09-05 15:58:12', '0'),
-(14, 3, 0, 'ttttt', 'gghhhh', '531701b892.jpg', '2020-09-05 16:14:23', '0'),
-(15, 3, 20, 'hhkjjjkk', 'hjjkklllkjj', '', '2020-09-06 11:36:20', '0');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `received-request`
---
-
-CREATE TABLE `received-request` (
-  `id` int(11) NOT NULL,
-  `post_id` int(11) NOT NULL,
-  `receiver_id` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `posts` (`id`, `category_id`, `donner_id`, `title`, `content`, `photo`, `created_at`) VALUES
+(4, 2, 0, 'Our Edu', ' Moreover, if the proposal gets approved, then scholarship payments for these examinations will not be.', '67ff2d32ea.jpg', '2020-08-26 16:31:05'),
+(5, 3, 0, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', '2020-08-26 16:49:06'),
+(6, 2, 0, 'Bangladesh', 'Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.', '9024c997d9.jpg', '2020-08-26 16:58:31');
 
 -- --------------------------------------------------------
 
@@ -5430,12 +5379,6 @@ ALTER TABLE `divisions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `donations`
---
-ALTER TABLE `donations`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `donners`
 --
 ALTER TABLE `donners`
@@ -5445,12 +5388,6 @@ ALTER TABLE `donners`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `received-request`
---
-ALTER TABLE `received-request`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -5502,12 +5439,6 @@ ALTER TABLE `divisions`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `donations`
---
-ALTER TABLE `donations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `donners`
 --
 ALTER TABLE `donners`
@@ -5517,19 +5448,13 @@ ALTER TABLE `donners`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `received-request`
---
-ALTER TABLE `received-request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `receivers`
 --
 ALTER TABLE `receivers`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `unions`

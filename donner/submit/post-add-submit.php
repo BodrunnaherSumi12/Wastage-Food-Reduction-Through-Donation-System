@@ -12,8 +12,11 @@
         $content = htmlspecialchars(trim($_POST['content']));
         $category = htmlspecialchars(trim($_POST['category']));
 
+
+        $donner_id=$_SESSION['donner_id'];
+        
         if ($title && $content && $category) {
-            $donner_id = $_SESSION['donner_id'];
+            
             $file_rename = ''; 
             
             if (isset($_FILES['image'])) {

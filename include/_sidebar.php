@@ -11,28 +11,24 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<section class="content">
+<section class="continer">
 
 
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-3" style="margin-right: 100px; rigth:1200.38px; left:-44px;padding-left:50px;">
-    <!-- Brand Logo -->
+<!--<aside class="main-sidebar sidebar-dark-primary elevation-2" style="margin-right: 100px; rigth:1200.38px; left:-44px;padding-left:50px;">
+    <!-- Brand Logo --> 
     
-      <span class="brand-text font-weight-light">Receiver</span>
+    <div class="dashboard-sidebar" style="width: 220px;color:#9D0552;padding:0px;position:fixed;">
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
+      <div class="user-panel mt-2 pb-2 mb-2 d-flex">
+       
+       
       </div>
-
+      </div>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -65,21 +61,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="user-register.php" class="nav-link">
+                <a href="receiver_post.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>New Request</p>
+                  <p>All Post</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="user-list.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Receiverd Post</p>
+                  <p>Requested Post</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-          <a href="../logout.php" class="nav-link">
+          <a href="./logout.php" class="nav-link">
               <p>
                 Logout
               </p>

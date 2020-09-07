@@ -9,16 +9,6 @@
     include 'include/_sidebar.php';
 ?>
 <div class=container>
-<div class="card">
-  <div class="card-body">
-  <h1>
-  
-  Deshboard
-  
-  </h1>
-    This is some text within a card body.
-  </div>
-</div>
 
 </div>
 <?php

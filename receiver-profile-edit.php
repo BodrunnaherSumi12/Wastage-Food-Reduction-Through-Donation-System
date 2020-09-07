@@ -91,22 +91,7 @@
                             ?>
                         </span>
                     </div>
-                    <div class="form-group col-lg-6">
-                    <label>Password</label><br>
-                        <input type="password" name="password" id="_pass" class="demo-input-box" value="<?php 
-                                    if(isset($data['password'])) 
-                                    {
-                                        echo $data['password'];
-                                    }
-                                ?>" placeholder="Enter password">
-                        <span class="text-danger">
-                            <?php 
-                                if(isset($err['password'])) {
-                                    echo $err['password'];
-                                }
-                            ?>
-                        </span>
-                    </div>
+                   
                     </div>
                     <div class="row">
                     <div class="form-group col-lg-6">

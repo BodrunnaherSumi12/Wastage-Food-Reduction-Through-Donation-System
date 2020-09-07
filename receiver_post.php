@@ -1,7 +1,8 @@
 <?php
     $page_title = 'Posts list';
 
-    include dirname(__FILE__). '/includes/header.php';
+    include 'include/header.php';
+    $db = new Database();
     $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts`
             LEFT JOIN categories ON posts.category_id=categories.id 
             LEFT JOIN donners ON posts.donner_id=donners.id";
@@ -9,14 +10,15 @@
    /// $_SESSION['donner_id']
    // $donner_id = $_SESSION['id'];
     //var_dump($query) ; die();
+    include 'include/_sidebar.php';
 ?>
 
+<div class= container>
+<div class="col-md-8 offset-md-2">
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Post list</h3><br>
-            <div class="card-header-action">
-                <a href="post-add.php" class="btn btn-primary">Add new post</a>
-            </div>
+           
         </div>
         <div class="card-body">
             <table class="table">
@@ -42,11 +44,11 @@
                                        <td><?php echo $post['category_name']; ?></td>
                                        <td><?php echo $post['content']; ?></td>
                                        
-                                       <td><img src="uploads/<?php echo $post['photo']; ?>"></td>
+                                       <td><img src="donner/uploads/<?php echo $post['photo']; ?>"></td>
                                        <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
                                        <td>
-                                           <a  class="fa fa-edit" href="edit-post.php?edit=<?php echo $post['id']; ?>">Edit</a>
-                                           <a class="fa fa-trash" href="post-delete.php?delete=<?php echo $post['id']; ?>">Delete</a>
+                                           <a  class="fa fa-check-circle" href="edit-post.php?edit=<?php echo $post['id']; ?>">Confirm</a>
+                                          
                                            
                                        </td>
                                     </tr>
@@ -64,8 +66,10 @@
             </table>
         </div>
     </div>
+    </div>
+    </div>
 
-<?php
-    // footer include
-    include dirname(__FILE__). '/includes/footer.php';
+    <?php
+   
+    include 'include/footer.php';
 ?>
