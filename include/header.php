@@ -1,7 +1,9 @@
 <?php
    include dirname(__FILE__).'/../database/database.php';
   session_start();
+  $db = new Database();
 
+   // $id = $_SESSION['id'];
   if (isset($_SESSION['errors'])) {
     $err = $_SESSION['errors'];
     unset($_SESSION['errors']);
@@ -15,6 +17,23 @@ if(isset($_SESSION['old_data']))
   $data = $_SESSION['old_data'];
   unset($_SESSION['old_data']);
 }
+  //$sql = "SELECT * FROM receivers WHERE `id` = $id";
+    //$run  = $db->conn->query($sql);
+  // $user = $run->fetch_assoc();
+
+   // $division = $user['division_id'];
+   // $district = $user['district_id'];
+   // $upazilla = $user['upazilla_id'];
+   // $union = $user['union_id'];
+
+    /*$query = "SELECT * FROM `posts` WHERE `division_id` =  $division AND `district_id` =  $district AND `district_id` =  $district
+      AND `upazilla_id` =  $upazilla AND `union_id` =  $union ";*/
+    $query = "SELECT * FROM `posts`";
+        $events = $db->getData($query);
+         if($events==NULL){
+          $numberEvent=0;
+        }else{
+      $numberEvent = mysqli_num_rows($events);}
   
 ?>
 
@@ -32,9 +51,18 @@ if(isset($_SESSION['old_data']))
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/login.css" rel="stylesheet">
+<link herf="assets/css/nitification" rel="stylesheet">
+<style>
+
+
+</style>
 </head>
 <body id="top">
-
+<input type="hidden" id="rec_id" value="<?php 
+  if (isset($_SESSION['receiver_id'])) {
+    echo $_SESSION['receiver_id'];
+  }
+?>">
 <div class="wrapper row1">
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -54,7 +82,9 @@ if(isset($_SESSION['old_data']))
     <!-- ################################################################################################ -->
     <ul class="clear">
       <li class="active"><a href="index.php">Home</a></li>
-      <li><a href="post.php">Posts</a></li>
+      
+      
+      <li><a href="post.php"><span>Posts</span></a></li>
       <li><a class="active" href="">Donate</a>
       <ul>
           <li><a href="food-donate.php">Donate Now</a></li>
@@ -62,14 +92,22 @@ if(isset($_SESSION['old_data']))
           <li><a href="donations.php">Donate Clearification</a> </li>
         </ul>
       </li>
-
-      <li><a class="active" href="#">Registration</a>
-        <ul>
+     
+      <?php 
+    if (!isset($_SESSION['id'])) {
+        ?>
+            <li><a href="register page link here">Registration</a>
+            <ul>
           <li><a href="user-register.php">Registration As Donner</a></li>
           <li><a href="user2-register.php">Registration As Receiver</a>
           </li>
         </ul>
-      </li>
+            </li>
+        <?php
+    } 
+?>
+      
+     
       <li><a href="donner-list.php">Donners</a></li>
       <li><a href="receiver-list.php">Receivers</a></li>
       <li><a href="#">About</a>
@@ -84,7 +122,12 @@ if(isset($_SESSION['old_data']))
     if (isset($_SESSION['id'])) {
         ?>
            <li><a href="#">Logged In (<?php  echo  $_SESSION['username']; ?>)</a>
-           <ul><li><a href="logout.php">Log Out</a></li></ul>
+           <ul><li><a href="receiver-index.php">Dashboard</a></li>
+           <li><a href="logout.php">Log Out</a></li>
+           </ul>
+           </li>
+           <li id="notify_lists" class="fa fa-bell" aria-hidden="true" style="padding-top:20px;"> <span id="notification_count">0</span>
+              
            </li>
            
         <?php
@@ -102,12 +145,7 @@ if(isset($_SESSION['old_data']))
     }
 ?>
      
-      <ul>
-         <li><a href="Admin/login.php">Log In As Admin</a></li>
-          <li><a href="donner_login.php">Log In As Donner</a></li>
-          <li><a href="receiver-login.php">Log In As Receiver</a>
-          </li>
-        </ul>
+      
     </li>
     </ul>
     <!-- ################################################################################################ -->

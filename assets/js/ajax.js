@@ -86,5 +86,25 @@ $(document).ready(function () {
         }
     });
 
+    //get notification
+    setInterval(function() {
+        var receiver_id = $('#rec_id').val();
+
+        if (receiver_id) {
+            $.ajax("get-notification.php", {
+                method: 'POST',
+                data: {
+                    receiver_id: receiver_id
+                },
+                success: function(res) {
+                    let response = JSON.parse(res);
+                    $('#notification_count').html(response.total_notification);
+                    $('#notify_lists').append(response.data);
+                }
+            });
+        }
+
+    }, 3000);
+
 
 });

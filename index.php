@@ -3,8 +3,7 @@
     // header include
     include 'include/header.php';
 ?>
-  <div class="wrapper bgded overlay" style="background-image:url('images/1.jpg.jpg');
- ">
+  <div class="wrapper bgded overlay" style="background-image:url('images/1.jpg.jpg');">
   <div id="pageintro" class="hoc clear"> 
    
     <article>
@@ -41,7 +40,7 @@
           </article>
         </li>
         <li class="one_third">
-          <article><i class="fa fa-s15"></i>
+          <article><i class="fa fa-tag"></i>
             <h6 class="heading font-x1"><a href="#">Free Health Service</a></h6>
             <p>Elit donec sodales varius dictum etiam sit amet elit metus sed ac ligula odio et placerat arcu sed [<a href="#">&hellip;</a>]</p>
           </article>
@@ -53,8 +52,8 @@
     <!-- ################################################################################################ -->
     <section>
       <div class="sectiontitle">
-        <h6 class="heading">Ligula turpis placerat quis</h6>
-        <p>Lobortis eu rutrum ut magna vivamus sodales quis nibh sit</p>
+        <h6 class="heading">OUR SOME MEMORIES</h6>
+        <p>Some Food Distribution & Collecting Moment</p>
       </div>
       <ul class="nospace group overview">
         <li class="one_third">
@@ -159,7 +158,7 @@
         </article>
       </li>
     </ul>
-    <footer class="center"><a class="btn" href="#">View All Posts &raquo;</a></footer>
+    <footer class="center"><a class="btn" href="post.php">View All Posts &raquo;</a></footer>
     <!-- ################################################################################################ -->
   </section>
 </div>

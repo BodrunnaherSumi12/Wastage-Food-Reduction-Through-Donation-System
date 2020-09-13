@@ -50,6 +50,10 @@
                             <div class="form-group">
                                 <input type="submit" name="login_submit" class="login-btn" value="LOGIN">
                             </div>
+                            <div  class="form-group" > 
+                            <a href="../index.php" class="btn btn-warning" style="float:right" >Home Page</a>
+
+                            </div>
                         </form>
                     </div>
                 </div>

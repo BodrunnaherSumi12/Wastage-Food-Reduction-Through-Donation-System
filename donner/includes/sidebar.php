@@ -15,7 +15,7 @@
         <img src="assets/img/user2-160x160.jpg" class="" alt="Donner Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Donner Name</a>
+        <a href="#" class="d-block">Donner</a>
       </div>
     </div>
 
@@ -25,21 +25,14 @@
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
+          <a href="donner-profile-edit.php" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Update Profile
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="../../index.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Dashboard v1</p>
-              </a>
-            </li>
-          </ul>
+         
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">

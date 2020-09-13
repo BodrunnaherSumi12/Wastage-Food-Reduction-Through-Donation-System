@@ -22,45 +22,45 @@ if (isset($_POST['donate_form'])) {
         
         if($food_amount &&  $food_type && $name && $division && $district && $upazilla && $union && $receiver && $content ){
            if (isset($_FILES['image'])) {
-            $file_name = $_FILES['image']['name'];
-            $tmp_name = $_FILES['image']['tmp_name'];
-            $file_size = $_FILES['image']['size'];
-            $allow = ['jpg', 'png', 'jpeg', 'gif'];
+                $file_name = $_FILES['image']['name'];
+                $tmp_name = $_FILES['image']['tmp_name'];
+                $file_size = $_FILES['image']['size'];
+                $allow = ['jpg', 'png', 'jpeg', 'gif'];
 
-              //extension
-              $div = explode('.', $file_name);
-              $ext = strtolower(end($div));
-              
-               //check extension
-               if (!in_array($ext, $allow)) {
-                $file_errors[] = 'File must be the following type: '. implode(', ', $allow);
-            }
-            
-            if ($file_size > (1024*30)) {
-                $file_errors[] = "File size should be more than 10KB";
-            } 
-            
-            if (empty($file_errors)) {
-                $file_rename = substr(md5(time()), 0, 10).'.'.$ext;
-                $upload_directory = '../uploads/'. $file_rename;
+                //extension
+                $div = explode('.', $file_name);
+                $ext = strtolower(end($div));
+                
+                //check extension
+                if (!in_array($ext, $allow)) {
+                    $file_errors[] = 'File must be the following type: '. implode(', ', $allow);
+                }
+                
+                if ($file_size > (1024*1024*30)) {
+                    $file_errors[] = "File size should be more than 10KB";
+                } 
+                
+                if (empty($file_errors)) {
+                    $file_rename = substr(md5(time()), 0, 10).'.'.$ext;
+                    $upload_directory = '../uploads/'. $file_rename;
 
-                if (!move_uploaded_file($tmp_name, $upload_directory)) {
-                    $_SESSION['file_errors'] = ['Faled to upload file'];
+                    if (!move_uploaded_file($tmp_name, $upload_directory)) {
+                        $_SESSION['file_errors'] = ['Faled to upload file'];
+                        header('location:../food-donate.php');
+                    }
+                } else {
+                    $_SESSION['file_errors'] = $file_errors;
                     header('location:../food-donate.php');
                 }
-            } else {
-                $_SESSION['file_errors'] = $file_errors;
-                header('location:../food-donate.php');
             }
-          }
-           else{
+          
                 // store register
-               // $insert_query = "INSERT INTO donations (food_amount, food_type,name,photo,division,district,upazilla,union,receiver) VALUES('$food_amount', '$food_type', '$name', '$file_rename','$division','$district','$upazilla','$union')";
+                // $insert_query = "INSERT INTO donations (food_amount, food_type,name,photo,division,district,upazilla,union,receiver) VALUES('$food_amount', '$food_type', '$name', '$file_rename','$division','$district','$upazilla','$union')";
                 $insert_query = "INSERT INTO `donations`( `food_amount`, `food_type`, `name`, `photo`, `division`, `district`, `upazilla`, `union`, `receiver`, `content`) VALUES ('$food_amount','$food_type','$name', '$file_rename','$division','$district','$upazilla','$union','$receiver','$content')";
 
 
                 $run = $db->store($insert_query);
-    
+
                 if ($run) {
                     $success['success_message'] = "Data Inserted successfully";
                 } else {
@@ -106,8 +106,5 @@ if (isset($_POST['donate_form'])) {
             $_SESSION['errors'] = $errors;
             header('location:../food-donate.php');
         }
-
-}
-
 
     

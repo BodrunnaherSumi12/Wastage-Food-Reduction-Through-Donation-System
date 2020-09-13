@@ -8,7 +8,7 @@
     
     $query = "SELECT posts.*, categories.name as category_name, donners.name as donner_name FROM `posts`
             LEFT JOIN categories ON posts.category_id=categories.id 
-            LEFT JOIN donners ON posts.donner_id=donners.id";
+            LEFT JOIN donners ON posts.donner_id=donners.id ORDER by id DESC";
     $posts = $db->getData($query);
     
     //var_dump($query) ; die();
@@ -16,10 +16,8 @@
 
 <div class="container">
        
-            <div class="card-header-action">
-               <!--<a href="post-add.php" class="btn btn-primary">Add new post</a>-->
-            </div>
-        </div>
+         
+      
         <div class="card-columns">
         
            <?php
@@ -36,7 +34,7 @@
                                     <h6 class="card-text"><?php echo $post['category_name']; ?></h6>
                                     <p class="card-text"><?php echo $post['content']?></p>
                                     <p class="card-text"><small class="text-muted"><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></small></p>
-                                    <a href="#" class="btn btn-primary">see more</a>
+                                    <a href="post-view.php" class="btn btn-primary">Confirm</a>
                                  </div>
                                 </div>
                                   

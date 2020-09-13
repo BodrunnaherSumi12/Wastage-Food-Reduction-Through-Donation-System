@@ -2,18 +2,18 @@
     $page_title = 'Update Category Information';
     
     //include 'database/database.php';
-    include 'include/header.php';
+    include 'includes/header.php';
      $db = new Database();
 
     if(isset($_GET['edit'])){
         $receiver_id=$_GET['edit'];
         
-        $sql = "SELECT * FROM receivers WHERE id='$receiver_id'";
+        $sql = "SELECT * FROM donners WHERE id='$donner_id'";
         $run  = $db->conn->query($sql);
         $data = $run->fetch_assoc();
     }
     
-    include 'include/_sidebar.php';
+    
     if (isset($_SESSION['old_data'])) 
     {
         $data = $_SESSION['old_data'];
@@ -25,7 +25,7 @@
     <div class="col-md-6 offset-md-3">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Edit Receiver Information</h3>
+                <h3 class="card-title">Edit Donner Information</h3>
             </div>
             <form action="receiver-profile-update.php" method="POST">
             <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
@@ -140,7 +140,7 @@
 </div>
 </div>
 <?php
-    $page_title = 'Home';
-    // header footer
-    include 'include/footer.php';
+  
+    //  footer
+    include 'includes/footer.php';
 ?>
