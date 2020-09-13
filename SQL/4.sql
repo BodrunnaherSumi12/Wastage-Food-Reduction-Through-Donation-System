@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2020 at 08:43 PM
+-- Generation Time: Sep 07, 2020 at 01:56 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -65,8 +65,7 @@ INSERT INTO `categories` (`id`, `name`, `created_at`) VALUES
 (4, 'Blogs', '2020-08-19 12:52:08'),
 (6, 'Sports', '2020-08-19 14:58:41'),
 (7, 'fun', '2020-08-25 20:13:08'),
-(8, 'plays', '2020-08-26 19:43:41'),
-(10, 'swarna', '2020-09-09 11:07:32');
+(8, 'plays', '2020-08-26 19:43:41');
 
 -- --------------------------------------------------------
 
@@ -209,9 +208,7 @@ CREATE TABLE `donations` (
 INSERT INTO `donations` (`id`, `food_amount`, `food_type`, `name`, `photo`, `division`, `district`, `upazilla`, `union`, `receiver`, `content`, `created_at`) VALUES
 (1, '', '', '', '8c4db3ef84.jpg', '', '', '', '', '', '', '2020-09-07 11:52:09'),
 (2, '', '', '', '', '', '', '', '', '', '', '2020-09-07 11:59:48'),
-(3, '', '', '', '', '', '', '', '', '', '', '2020-09-07 12:00:19'),
-(4, '4', 'Snacks Type', 'sss', '45cd1e8dd4.jpg', '6', '47', '366', '3293', '19', 'rrrr', '2020-09-07 18:55:15'),
-(5, '3', 'Snacks Type', 'ddd', 'b5c94b0dea.jpg', '6', '47', '366', '3285', '21', 'skksk', '2020-09-12 00:45:50');
+(3, '', '', '', '', '', '', '', '', '', '', '2020-09-07 12:00:19');
 
 -- --------------------------------------------------------
 
@@ -269,7 +266,7 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `category_id`, `donner_id`, `title`, `content`, `photo`, `created_at`, `status`) VALUES
 (4, 7, 0, 'Our Edu', '   Moreover, if the proposal gets approved, then scholarship payments for these examinations will not be.', '67ff2d32ea.jpg', '2020-08-26 16:31:05', '0'),
-(5, 3, 9, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', '2020-08-26 16:49:06', '0'),
+(5, 3, 0, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', '2020-08-26 16:49:06', '0'),
 (6, 2, 9, 'Bangladesh', 'Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.', '9024c997d9.jpg', '2020-08-26 16:58:31', '0'),
 (9, 2, 0, 'food Organization', 'food for all', 'b9c05f9c88.jpg', '2020-09-05 12:41:48', '0'),
 (10, 2, 0, 'FOOOD', 'Plese distribute this food to ta needed people', '', '2020-09-05 12:54:49', '0'),
@@ -5490,7 +5487,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `districts`
@@ -5508,7 +5505,7 @@ ALTER TABLE `divisions`
 -- AUTO_INCREMENT for table `donations`
 --
 ALTER TABLE `donations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `donners`
