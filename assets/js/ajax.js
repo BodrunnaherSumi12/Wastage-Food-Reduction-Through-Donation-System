@@ -96,6 +96,9 @@ $(document).ready(function () {
                 data: {
                     receiver_id: receiver_id
                 },
+                beforeSend: function () {
+                    $('#notify_lists').html('');
+                },
                 success: function(res) {
                     let response = JSON.parse(res);
                     $('#notification_count').html(response.total_notification);

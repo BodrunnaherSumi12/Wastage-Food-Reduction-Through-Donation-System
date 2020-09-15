@@ -126,7 +126,8 @@ if(isset($_SESSION['old_data']))
            <li><a href="logout.php">Log Out</a></li>
            </ul>
            </li>
-           <li id="notify_lists" class="fa fa-bell" aria-hidden="true" style="padding-top:20px;"> <span id="notification_count">0</span>
+           <li id="notify_lists" class="fa fa-bell" aria-hidden="true" style="padding-top:20px;"> 
+            <span id="notification_count">0</span>
               
            </li>
            

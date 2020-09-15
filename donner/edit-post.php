@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'Update Blog ';
+    $page_title = 'Edit post ';
     // include header file
     include dirname(__FILE__). '/includes/header.php';
    $db = new Database();
@@ -27,7 +27,7 @@
     <div class="col-md-6 offset-md-3">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Edit Blog </h3>
+                <h3 class="card-title">Edit Post </h3>
             </div>
             <form action="update-post.php" method="POST">
             <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
