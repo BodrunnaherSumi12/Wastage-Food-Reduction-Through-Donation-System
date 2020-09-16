@@ -139,8 +139,7 @@
     </div>
 </div>
 </div>
-<?php
-    $page_title = 'Home';
-    // header footer
+<?php 
+  
     include 'include/footer.php';
 ?>

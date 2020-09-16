@@ -2,7 +2,7 @@
     $page_title = 'Update Category Information';
     
     //include 'database/database.php';
-    include 'includes/header.php';
+    include dirname(__FILE__). '/includes/header.php';
      $db = new Database();
 
     if(isset($_GET['edit'])){
@@ -12,7 +12,6 @@
         $run  = $db->conn->query($sql);
         $data = $run->fetch_assoc();
     }
-    
     
     if (isset($_SESSION['old_data'])) 
     {
@@ -27,7 +26,7 @@
             <div class="card-header">
                 <h3 class="card-title">Edit Donner Information</h3>
             </div>
-            <form action="receiver-profile-update.php" method="POST">
+            <form action="update-donner.php" method="POST">
             <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
                 <div class="card-body">
                     <?php 
@@ -128,6 +127,7 @@
                     </div>
 
                     </div>
+                    
                     
                     
                 </div>

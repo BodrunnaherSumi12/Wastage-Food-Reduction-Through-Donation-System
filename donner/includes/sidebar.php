@@ -38,7 +38,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
-              Receiver Request
+              Received post
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -46,13 +46,7 @@
             <li class="nav-item">
               <a href="user-register.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>New user</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="user-list.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>User List</p>
+                <p> Receive Post List</p>
               </a>
             </li>
           </ul>
