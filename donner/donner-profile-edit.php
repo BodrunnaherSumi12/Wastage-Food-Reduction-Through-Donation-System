@@ -26,7 +26,7 @@
             <div class="card-header">
                 <h3 class="card-title">Edit Donner Information</h3>
             </div>
-            <form action="update-donner.php" method="POST">
+            <form action="donner-profile-update.php" method="POST">
             <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
                 <div class="card-body">
                     <?php 
@@ -132,7 +132,7 @@
                     
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-secondary btn-lg btn-block" name="rec-update_profile">UPDATE</button>
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block" name="update_profile">UPDATE</button>
                 </div>
             </form>
         </div>

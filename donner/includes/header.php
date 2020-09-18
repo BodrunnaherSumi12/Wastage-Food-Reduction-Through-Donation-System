@@ -1,4 +1,5 @@
 <?php
+  session_start();
  $page_title = 'Dashboard';
   include dirname(__FILE__).'/../database/database.php';
   

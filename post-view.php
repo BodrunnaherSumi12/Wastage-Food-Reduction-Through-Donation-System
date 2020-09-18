@@ -23,9 +23,7 @@
     
     if(isset($_POST['receive_food']))
 	{
-        //$id = $_POST['id'];
-       // $post_id = $_POST['post_id'];
-        
+       
         $status = $_POST['status'];
 
             $sql = "UPDATE posts SET status='$status' where posts.id='$post_id'";
@@ -42,6 +40,9 @@
                 $_SESSION['msg_type'] = "danger";
                 header('location:post.php');
             }
+            $receiver_id = $_SESSION['receiver_id'];
+            $insert_query = "INSERT INTO received_post (post_id,receiver_id) VALUES('$post_id', '$receiver_id')";
+            $run = $db->store($insert_query);
 
         
          

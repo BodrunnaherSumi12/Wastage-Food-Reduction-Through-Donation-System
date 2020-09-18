@@ -17,23 +17,8 @@ if(isset($_SESSION['old_data']))
   $data = $_SESSION['old_data'];
   unset($_SESSION['old_data']);
 }
-  //$sql = "SELECT * FROM receivers WHERE `id` = $id";
-    //$run  = $db->conn->query($sql);
-  // $user = $run->fetch_assoc();
-
-   // $division = $user['division_id'];
-   // $district = $user['district_id'];
-   // $upazilla = $user['upazilla_id'];
-   // $union = $user['union_id'];
-
-    /*$query = "SELECT * FROM `posts` WHERE `division_id` =  $division AND `district_id` =  $district AND `district_id` =  $district
-      AND `upazilla_id` =  $upazilla AND `union_id` =  $union ";*/
-    $query = "SELECT * FROM `posts`";
-        $events = $db->getData($query);
-         if($events==NULL){
-          $numberEvent=0;
-        }else{
-      $numberEvent = mysqli_num_rows($events);}
+ 
+   
   
 ?>
 
