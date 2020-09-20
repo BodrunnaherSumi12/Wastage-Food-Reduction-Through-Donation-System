@@ -1,5 +1,4 @@
 <?php
-    $page_title = 'Update Category Information';
     
     //include 'database/database.php';
     include 'include/header.php';
@@ -28,7 +27,7 @@
                 <h3 class="card-title">Edit Receiver Information</h3>
             </div>
             <form action="receiver-profile-update.php" method="POST">
-            <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
+            <input type="hidden" name="id" value='<?php  echo $data['receiver_id']; ?>' ></input>
                 <div class="card-body">
                     <?php 
                         if (isset($message['success_message'])) {

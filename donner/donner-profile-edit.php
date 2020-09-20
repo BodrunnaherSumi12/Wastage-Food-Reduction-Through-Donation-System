@@ -1,6 +1,5 @@
 <?php
-    $page_title = 'Update Category Information';
-    
+     
     //include 'database/database.php';
     include dirname(__FILE__). '/includes/header.php';
      $db = new Database();
@@ -8,7 +7,7 @@
     if(isset($_GET['edit'])){
         $receiver_id=$_GET['edit'];
         
-        $sql = "SELECT * FROM donners WHERE id='$donner_id'";
+        $sql = "SELECT * FROM donners WHERE id='$id'";
         $run  = $db->conn->query($sql);
         $data = $run->fetch_assoc();
     }
@@ -42,11 +41,12 @@
                       <div class="form-group col-lg-6">
                         <label for="_name">Name</label><br>
                         <input type="text" name="name" id="_name" class="demo-input-box" value="<?php 
-                                        if(isset($data['name'])) 
-                                        {
+                                    if(isset($data['name'])) 
+                                    {
                                         echo $data['name'];
                                     }
-                                ?>" placeholder="Enter Name">
+                                ?>"
+                         placeholder="Enter Name">
                         <span class="text-danger">
                             <?php 
                                 if(isset($err['name'])) {

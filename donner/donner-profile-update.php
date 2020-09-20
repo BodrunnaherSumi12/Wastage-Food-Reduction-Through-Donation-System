@@ -20,15 +20,12 @@
         $phone = $_POST['phone'];
         $address = $_POST['address'];
       
-       
-        if(!empty($name) && !empty($email) && !empty($username) && !empty($phone) && 
+       if(!empty($name) && !empty($email) && !empty($username) && !empty($phone) && 
             !empty($addrress))
         {
 
-           /* $sql = "UPDATE receivers SET name='$name',email='$email',username='$username',password='$password',phone='$phone',address='$address',division_id='$division',district_id='$district',upazilla_id='$upazilla',union_id='$union'where id='$id' ";*/
-
 	      $sql = "UPDATE donners SET `name`='$name',`email`='$email',`username`='$username',
-                `phone`='$phone',`address`='$address' where `id`='$id' ";
+                `phone`='$phone',`address`='$address' where `id`='$donner_id' ";
             $result = $db->conn->query($sql);
             
 

@@ -13,26 +13,21 @@
     if (isset($_POST['rec-update_profile'])) {
         //var_dump($_POST['rec-update_profile']) ; die();
    
-        $id = $_POST['id'];
+        $id = $_POST['receiver_id'];
         $name = $_POST['name'];
         $email = $_POST['email'];
         $username = $_POST['username'];
-        //$password = $_POST['password'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
-       // $division = $_POST['division'];
-       // $district = $_POST['district'];
-       // $upazilla = $_POST['upazilla'];
-       // $union = $_POST['union'];
-       
-        if(!empty($name) && !empty($email) && !empty($username) /*&& !empty($password)*/ && !empty($phone) && 
-            !empty($addrress) /*&& !empty($division) && !empty($district) && !empty($upazilla) && !empty($union)*/)
+      
+        if(!empty($name) && !empty($email) && !empty($username) && !empty($phone) && 
+            !empty($addrress))
         {
 
            /* $sql = "UPDATE receivers SET name='$name',email='$email',username='$username',password='$password',phone='$phone',address='$address',division_id='$division',district_id='$district',upazilla_id='$upazilla',union_id='$union'where id='$id' ";*/
 
 	      $sql = "UPDATE receivers SET `name`='$name',`email`='$email',`username`='$username',
-                `phone`='$phone',`address`='$address' where `id`='$id' ";
+                `phone`='$phone',`address`='$address' where `id`='$receiver_id' ";
             $result = $db->conn->query($sql);
             
 

@@ -18,6 +18,7 @@
             if ($run->num_rows > 0) {
                 $user = $run->fetch_assoc();
                 $_SESSION['username'] = $user['username'];
+                $_SESSION['user_id'] = $user['id'];
                 $_SESSION['donner_id']=$user['id'];
                 $_SESSION['id'] = $user['id'];
                 header('location:../donner/index.php');

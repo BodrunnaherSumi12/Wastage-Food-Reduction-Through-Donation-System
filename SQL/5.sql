@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2020 at 02:54 PM
+-- Generation Time: Sep 13, 2020 at 08:43 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -259,25 +259,25 @@ CREATE TABLE `posts` (
   `title` varchar(200) NOT NULL,
   `content` text NOT NULL,
   `photo` varchar(30) DEFAULT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
-  `created_at` datetime DEFAULT current_timestamp()
+  `created_at` datetime DEFAULT current_timestamp(),
+  `status` varchar(100) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`id`, `category_id`, `donner_id`, `title`, `content`, `photo`, `status`, `created_at`) VALUES
-(4, 6, 20, 'Our Edu', '    Moreover, if the proposal gets approved, then scholarship payments for these examinations will not be.', '67ff2d32ea.jpg', 1, '2020-08-26 16:31:05'),
-(5, 3, 9, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', 0, '2020-08-26 16:49:06'),
-(6, 2, 9, 'Bangladesh', 'Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.', '9024c997d9.jpg', 0, '2020-08-26 16:58:31'),
-(9, 2, 0, 'food Organization', 'food for all', 'b9c05f9c88.jpg', 0, '2020-09-05 12:41:48'),
-(10, 2, 20, 'FOOOD', 'Plese distribute this food to ta needed people', '', 1, '2020-09-05 12:54:49'),
-(11, 3, 0, 'FOOOD', 'ghfghfhgfghhhhhhhf', 'a8c2f3e4e0.jpg', 1, '2020-09-05 13:38:00'),
-(12, 3, 0, 'hjhjjj', 'jhgjgjg', '70751b10f7.jpg', 1, '2020-09-05 14:15:02'),
-(13, 7, 20, 'ggoooll', 'gqawesfgu', '', 1, '2020-09-05 15:58:12'),
-(14, 3, 0, 'ttttt', 'gghhhh', '531701b892.jpg', 1, '2020-09-05 16:14:23'),
-(15, 3, 20, 'hhkjjjkk', 'hjjkklllkjj', '', 1, '2020-09-06 11:36:20');
+INSERT INTO `posts` (`id`, `category_id`, `donner_id`, `title`, `content`, `photo`, `created_at`, `status`) VALUES
+(4, 7, 0, 'Our Edu', '   Moreover, if the proposal gets approved, then scholarship payments for these examinations will not be.', '67ff2d32ea.jpg', '2020-08-26 16:31:05', '0'),
+(5, 3, 9, 'food Organization', 'The ceremony was hosted this week on the Facebook page of the HerStory Foundation', '440321fe81.jpg', '2020-08-26 16:49:06', '0'),
+(6, 2, 9, 'Bangladesh', 'Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.', '9024c997d9.jpg', '2020-08-26 16:58:31', '0'),
+(9, 2, 0, 'food Organization', 'food for all', 'b9c05f9c88.jpg', '2020-09-05 12:41:48', '0'),
+(10, 2, 0, 'FOOOD', 'Plese distribute this food to ta needed people', '', '2020-09-05 12:54:49', '0'),
+(11, 3, 0, 'FOOOD', 'ghfghfhgfghhhhhhhf', 'a8c2f3e4e0.jpg', '2020-09-05 13:38:00', '0'),
+(12, 3, 0, 'hjhjjj', 'jhgjgjg', '70751b10f7.jpg', '2020-09-05 14:15:02', '0'),
+(13, 7, 0, 'ggoooll', 'gqawesfgu', '', '2020-09-05 15:58:12', '0'),
+(14, 3, 0, 'ttttt', 'gghhhh', '531701b892.jpg', '2020-09-05 16:14:23', '0'),
+(15, 3, 20, 'hhkjjjkk', 'hjjkklllkjj', '', '2020-09-06 11:36:20', '0');
 
 -- --------------------------------------------------------
 
@@ -291,29 +291,6 @@ CREATE TABLE `received-request` (
   `receiver_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `received_post`
---
-
-CREATE TABLE `received_post` (
-  `id` int(11) NOT NULL,
-  `post_id` int(150) NOT NULL,
-  `receiver_id` int(150) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `received_post`
---
-
-INSERT INTO `received_post` (`id`, `post_id`, `receiver_id`, `created_at`) VALUES
-(1, 4, 21, '2020-09-17 13:06:55'),
-(2, 13, 21, '2020-09-17 14:35:32'),
-(3, 10, 21, '2020-09-17 17:37:20'),
-(4, 12, 21, '2020-09-17 17:41:59');
 
 -- --------------------------------------------------------
 
@@ -5480,12 +5457,6 @@ ALTER TABLE `received-request`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `received_post`
---
-ALTER TABLE `received_post`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `receivers`
 --
 ALTER TABLE `receivers`
@@ -5556,12 +5527,6 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `received-request`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `received_post`
---
-ALTER TABLE `received_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `receivers`
