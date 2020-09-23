@@ -11,9 +11,9 @@
     $_SESSION['old_data'] = $_POST;
     
     if (isset($_POST['update_profile'])) {
-        //var_dump($_POST['rec-update_profile']) ; die();
+        //var_dump($_POST['update_profile']) ; die();
    
-        $id = $_POST['id'];
+        $donner_id = $_POST['donner_id'];
         $name = $_POST['name'];
         $email = $_POST['email'];
         $username = $_POST['username'];
@@ -21,22 +21,21 @@
         $address = $_POST['address'];
       
        if(!empty($name) && !empty($email) && !empty($username) && !empty($phone) && 
-            !empty($addrress))
+            !empty($address))
         {
 
 	      $sql = "UPDATE donners SET `name`='$name',`email`='$email',`username`='$username',
                 `phone`='$phone',`address`='$address' where `id`='$donner_id' ";
             $result = $db->conn->query($sql);
-            
 
             if($result){
-                $_SESSION['message'] = "donners ID $id Data Updated Successfully!";
-            	$_SESSION['msg_type'] = "warning";
+                $success['success_message'] = "donners ID $donner_id Data Updated Successfully!";
+            	$_SESSION['success'] = $success;
             	header('location:donner-profile-edit.php');
             } 
             else{
-                $_SESSION['message'] = " Data Can not be Updated !!";
-                $_SESSION['msg_type'] = "danger";
+                $success['error_message'] = " Data Can not be Updated !!";
+                $_SESSION['success'] = $success;
                 header('location:donner-profile-edit.php');
             }
             

@@ -1,6 +1,6 @@
 
 
-<div class="wrapper row5" style="margin-top:300px;">
+<div class="wrapper row5" style="margin-top:00px;">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>

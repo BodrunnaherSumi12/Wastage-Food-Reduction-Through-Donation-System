@@ -52,7 +52,7 @@ if(isset($_SESSION['old_data']))
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="index.html">Wastage Food Reduction Trough Donation system</a></h1>
+      <h1><a href="#">Wastage Food Reduction Trough Donation system</a></h1>
       <p>Food For All</p>
     </div>
     <div id="quickinfo" class="fl_right">
@@ -78,6 +78,16 @@ if(isset($_SESSION['old_data']))
         </ul>
       </li>
      
+      <li><a href="donner-list.php">Donners</a></li>
+      <li><a href="receiver-list.php">Receivers</a></li>
+      <li><a href="#">About</a>
+      <ul>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a>
+          </li>
+        </ul>
+      </li>
+      </li>
       <?php 
     if (!isset($_SESSION['id'])) {
         ?>
@@ -92,17 +102,6 @@ if(isset($_SESSION['old_data']))
     } 
 ?>
       
-     
-      <li><a href="donner-list.php">Donners</a></li>
-      <li><a href="receiver-list.php">Receivers</a></li>
-      <li><a href="#">About</a>
-      <ul>
-          <li><a href="about.php">About Us</a></li>
-          <li><a href="contact.php">Contact Us</a>
-          </li>
-        </ul>
-      </li>
-      </li>
       <?php 
     if (isset($_SESSION['id'])) {
         ?>

@@ -4,11 +4,11 @@
     include dirname(__FILE__). '/includes/header.php';
      $db = new Database();
 
-    if(isset($_GET['edit'])){
-        $receiver_id=$_GET['edit'];
+    if(isset($_SESSION['id'])){
+        $donner_id = $_SESSION['id'];
         
-        $sql = "SELECT * FROM donners WHERE id='$id'";
-        $run  = $db->conn->query($sql);
+        $sql = "SELECT * FROM donners WHERE id='$donner_id'";
+        $run  = $db->getData($sql);
         $data = $run->fetch_assoc();
     }
     
@@ -26,7 +26,7 @@
                 <h3 class="card-title">Edit Donner Information</h3>
             </div>
             <form action="donner-profile-update.php" method="POST">
-            <input type="hidden" name="id" value='<?php  echo $data['id']; ?>' ></input>
+            <input type="hidden" name="donner_id" value='<?php  echo $donner_id; ?>' ></input>
                 <div class="card-body">
                     <?php 
                         if (isset($message['success_message'])) {
@@ -40,7 +40,7 @@
                     <div class="row">
                       <div class="form-group col-lg-6">
                         <label for="_name">Name</label><br>
-                        <input type="text" name="name" id="_name" class="demo-input-box" value="<?php 
+                        <input type="text" name="name" id="_name" class="form-control demo-input-box" value="<?php 
                                     if(isset($data['name'])) 
                                     {
                                         echo $data['name'];
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="_email">Email</label><br>
-                        <input type="email" name="email" id="_email" class="demo-input-box"  value="<?php 
+                        <input type="email" name="email" id="_email" class="form-control demo-input-box"  value="<?php 
                                     if(isset($data['email'])) 
                                     {
                                         echo $data['email'];
@@ -76,7 +76,7 @@
                     <div class="form-group col-lg-6"  >
 
                         <label for="_username">Username</label><br>
-                        <input type="text" name="username" id="_username" class="demo-input-box"   value="<?php 
+                        <input type="text" name="username" id="_username" class="form-control demo-input-box"   value="<?php 
                                     if(isset($data['username'])) 
                                     {
                                         echo $data['username'];
@@ -95,7 +95,7 @@
                     <div class="row">
                     <div class="form-group col-lg-6">
                         <label for="_phone">Phone</label><br>
-                        <input type="text" name="phone" id="_phone" class="demo-input-box"  value="<?php 
+                        <input type="text" name="phone" id="_phone" class="form-control demo-input-box"  value="<?php 
                                     if(isset($data['phone'])) 
                                     {
                                         echo $data['phone'];
@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="_address">Address</label><br>
-                        <input type="text" name="address" id="_address" class="demo-input-box"  value="<?php 
+                        <input type="text" name="address" id="_address" class="form-control demo-input-box"  value="<?php 
                                     if(isset($data['address'])) 
                                     {
                                         echo $data['address'];

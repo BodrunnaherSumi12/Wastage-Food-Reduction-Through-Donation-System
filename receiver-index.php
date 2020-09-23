@@ -9,7 +9,7 @@
     include 'include/_sidebar.php';
 ?>
 <div class=container>
-
+<div style="background-image: url('/images/receiver.jpg');"></div>
 </div>
 <?php
     $page_title = 'Home';

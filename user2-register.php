@@ -24,7 +24,11 @@
  <div class="container">
            <link rel="stylesheet" href="./assets/plugins/bootstrap/dist/css/bootstrap.min.css">
      <form action="submit/user2-register-submit.php" method="POST" enctype="multipart/form-data" style="padding-top:50px;">
-       <div class="card-header">Receiver Registration </div>
+     <div class="card-header text-center">
+       <h4 class="pb-3"> Receiver Registration Form </h4>
+             <hr style=" border: 1px solid lightgray; margin:0 15px 15px;">
+      
+       </div>
 
       
         <div class="card-body " style="background-color:#DCDCDC">
