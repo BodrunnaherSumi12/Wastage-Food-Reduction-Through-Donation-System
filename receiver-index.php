@@ -12,7 +12,7 @@
 <div style="background-image: url('/images/receiver.jpg');"></div>
 </div>
 <?php
-    $page_title = 'Home';
+    
     // header footer
     include 'include/footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'Home';
+
     // header include
     include 'include/header.php';
 ?>
@@ -9,7 +9,7 @@
 <link href="layout/styles/form.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<form action="submit/user-register-submit.php" method="POST" style="padding-top:50px;">
+<form action="submit/contact-submit.php" method="POST" style="padding-top:50px;">
         <div class="demo-table">
         <div class="form-head">Contact Us</div>
       
@@ -72,11 +72,11 @@
                     <div class="textarea">
                         <label for="_address">Message</label>
                       
-                        <input type="textarea" name="address" id="_address" class="demo-input-box" placeholder="Enter  your message">
+                        <input type="textarea" name="message" id="_message" class="demo-input-box" placeholder="Enter  your message">
                         <span class="text-danger">
                             <?php 
-                                if(isset($err['address'])) {
-                                    echo $err['address'];
+                                if(isset($err['message'])) {
+                                    echo $err['message'];
                                 }
                             ?>
                         </span>
@@ -89,7 +89,7 @@
                   </div> 
                 <div>
                     <input type="submit"
-                        name="register_form" value="Register"
+                        name="contact_form" value="Submit"
                         class="btnRegister">
                 </div>
             </div>
@@ -101,7 +101,7 @@
 
 
 <?php
-    $page_title = 'Home';
+   
     // header footer
     include 'include/footer.php';
 ?>

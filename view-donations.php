@@ -1,8 +1,8 @@
 <?php 
-   $page_title = 'donation  list';
+   $page_title = 'donation list';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
-  $query = "SELECT id,food_type,food_amount,photo,name,receiver FROM donations";
+  $query = "SELECT * FROM `donations` WHERE donations.receiver='$receiver_id' ORDER BY id DESC";
     $posts = $db->getData($query);
   // ver_dump(query);
   // die();

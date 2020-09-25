@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2020 at 07:39 PM
+-- Generation Time: Sep 20, 2020 at 02:54 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -67,62 +67,6 @@ INSERT INTO `categories` (`id`, `name`, `created_at`) VALUES
 (7, 'fun', '2020-08-25 20:13:08'),
 (8, 'plays', '2020-08-26 19:43:41'),
 (10, 'swarna', '2020-09-09 11:07:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `coment` varchar(150) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`id`, `name`, `coment`, `created_at`) VALUES
-(1, 'Ruhi', '', '2020-09-25 16:17:43'),
-(2, 'Ruhi', 'Need Your Support', '2020-09-25 16:18:11'),
-(3, 'Ruhi', 'Need Your Support', '2020-09-25 16:20:46'),
-(4, 'Ruhi', 'Need Your Support', '2020-09-25 16:22:31'),
-(5, 'Ruhi', 'Need Your Support', '2020-09-25 16:24:16'),
-(6, 'Ruhi', 'Need Your Support', '2020-09-25 16:42:49'),
-(7, 'Ruhi', 'Need Your Support', '2020-09-25 16:43:07'),
-(8, 'sss', 'ddd', '2020-09-25 16:48:20'),
-(9, 'sss', 'ddd', '2020-09-25 16:51:21'),
-(10, 'sss', 'ddd', '2020-09-25 16:52:19'),
-(11, 'sss', 'ddd', '2020-09-25 16:54:21'),
-(12, 'sss', 'ddd', '2020-09-25 16:55:26');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `contact`
---
-
-CREATE TABLE `contact` (
-  `id` int(11) NOT NULL,
-  `name` varchar(150) NOT NULL,
-  `username` varchar(150) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `phone` varchar(150) NOT NULL,
-  `message` varchar(200) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `contact`
---
-
-INSERT INTO `contact` (`id`, `name`, `username`, `email`, `phone`, `message`, `created_at`) VALUES
-(2, 'Ruhi', 'China kitchen', 'china@gmail.com', '+88-096125553', 'We are hiring', '2020-09-24 18:29:01'),
-(3, 'Zulkar Nayeen', 'WT Solver', 'wt@gmail.com', '+88-096125553338', 'We need Your Support for Making Better Site Like You', '2020-09-24 18:32:24'),
-(4, 'Mir Shetu', 'Occupy soft.', 'shetu@gmail.com', '+01711373277', 'We need Your Support for Making Better Site Like You', '2020-09-24 18:35:19');
 
 -- --------------------------------------------------------
 
@@ -267,8 +211,7 @@ INSERT INTO `donations` (`id`, `food_amount`, `food_type`, `name`, `photo`, `div
 (2, '', '', '', '', '', '', '', '', '', '', '2020-09-07 11:59:48'),
 (3, '', '', '', '', '', '', '', '', '', '', '2020-09-07 12:00:19'),
 (4, '4', 'Snacks Type', 'sss', '45cd1e8dd4.jpg', '6', '47', '366', '3293', '19', 'rrrr', '2020-09-07 18:55:15'),
-(5, '3', 'Snacks Type', 'ddd', 'b5c94b0dea.jpg', '6', '47', '366', '3285', '21', 'skksk', '2020-09-12 00:45:50'),
-(6, '9', 'Snacks Type', 'faria', '280e77ff42.jpg', '6', '47', '366', '3286', '21', 'You Collect this as soon as possible', '2020-09-24 12:28:12');
+(5, '3', 'Snacks Type', 'ddd', 'b5c94b0dea.jpg', '6', '47', '366', '3285', '21', 'skksk', '2020-09-12 00:45:50');
 
 -- --------------------------------------------------------
 
@@ -298,7 +241,7 @@ CREATE TABLE `donners` (
 
 INSERT INTO `donners` (`id`, `name`, `email`, `username`, `password`, `phone`, `photo`, `address`, `division_id`, `district_id`, `upazilla_id`, `union_id`, `created_at`) VALUES
 (9, 'Uttara Community Center', 'utccentre@gmail.com', 'uttara centre', '8cb2237d0679ca88db6464eac60da96345513964', '+88-09612555333', '437c6020ab.jpg', 'House No:64, Road:13, Sector: 11 Uttara', 6, 47, 369, 3325, '2020-09-01 00:24:11.979261'),
-(20, 'White Palace ', 'info.white@gmail.com', 'white palace', '8cb2237d0679ca88db6464eac60da96345513964', '+8801958-5799334', '7cbe3e1bee.jpg', 'House No, 25 Road-06, Dhaka 1230', 6, 47, 366, 3291, '2020-09-01 01:04:16.120425'),
+(20, 'White Palace Uttara', 'info.white@gmail.com', 'White Palace', '8cb2237d0679ca88db6464eac60da96345513964', '+8801958-579933', '7cbe3e1bee.jpg', 'House No, 25 Road-06, Dhaka 1230', 6, 47, 366, 3291, '2020-09-01 01:04:16.120425'),
 (21, 'Suchona Community Center', 'suchana@gmail.com', 'Suchona', '8cb2237d0679ca88db6464eac60da96345513964', '+88098765432', 'e55f85a41e.jpg', 'House No: 34, Dhanmodi', 6, 44, 335, 3001, '2020-09-01 01:07:27.402192'),
 (24, 'Biye Bari Resturant', 'biyebari@gmal.com', 'biye bari', '8cb2237d0679ca88db6464eac60da96345513964', '', '', '', 0, 0, 0, 0, '2020-09-01 11:35:10.930885'),
 (25, 'China Kitchen', 'chinakitchen@gmail.com', 'chinakitchen', '8cb2237d0679ca88db6464eac60da96345513964', '+88098765432', '4fdc79248c.jpg', '185 Elephant Road, Sonargaon Road, Near Hatirpool Kacha Bazar, Dhaka 1205', 6, 47, 366, 3292, '2020-09-01 13:40:28.781960');
@@ -401,7 +344,7 @@ CREATE TABLE `receivers` (
 INSERT INTO `receivers` (`id`, `name`, `email`, `username`, `password`, `phone`, `address`, `photo`, `division_id`, `district_id`, `upazilla_id`, `union_id`, `created_at`) VALUES
 (19, 'AL Ikra Foundation', 'alikra.official@gmail.com', 'ALIKRA', '8cb2237d0679ca88db6464eac60da96345513964', '01711546784', 'Dhaka', 'eb429105e1.jpg', 6, 47, 366, 3283, '2020-08-31 20:59:00'),
 (20, 'Bangladesh Chairity Right & Human Resource', 'bncrh.official@gmail.com', 'bangladesh chairity', '8cb2237d0679ca88db6464eac60da96345513964', '+880987654433', 'Narayanganj', '5107d34cd8.jpg', 6, 43, 329, 2959, '2020-08-31 21:23:50'),
-(21, 'Save The Children', 'savechildren@gmail.com', 'save children', '8cb2237d0679ca88db6464eac60da96345513964', '+88-09612555', 'House No. CWN (A) 35, Road No. 43 Gulshan – 2, Dhaka -1212 Bangladesh.', '9e270b5114.png', 6, 47, 366, 3290, '2020-08-31 21:34:29'),
+(21, 'Save The Children', 'savechildren@gmail.com', 'save children', '8cb2237d0679ca88db6464eac60da96345513964', '+88-09612555333', 'House No. CWN (A) 35, Road No. 43 Gulshan – 2, Dhaka -1212 Bangladesh.', '9e270b5114.png', 6, 47, 366, 3290, '2020-08-31 21:34:29'),
 (24, 'Bangladeshi American Community For Charity BACC', 'bacc@gmail.com', 'bacc', '8cb2237d0679ca88db6464eac60da96345513964', '+88098765432', 'House No.45 Road:11 Sector:10 Uttara', 'e7624ba699.png', 6, 47, 369, 3325, '2020-08-31 22:49:53'),
 (27, 'The Foundation For Women,Orphan,& Children', 'infotfn@gmail.com', 'foundation', '8cb2237d0679ca88db6464eac60da96345513964', '+88-09612555333', 'House No. CWN (A) 35, Road No. 43 Gulshan – 2, Dhaka -1212 Bangladesh.', '50c4db713d.png', 6, 47, 365, 3279, '2020-08-31 23:10:47'),
 (29, 'Manusher Jonno Foundation', 'manusher@gmail.com', 'manusher Foundation', '8cb2237d0679ca88db6464eac60da96345513964', '+880987654433', 'House No:204,  Shanti nir ,Hatirpul Kacha Bazar', 'b753320a43.jpg', 6, 47, 366, 3293, '2020-08-31 23:46:47');
@@ -5500,18 +5443,6 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `districts`
 --
 ALTER TABLE `districts`
@@ -5591,18 +5522,6 @@ ALTER TABLE `categories`
   MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `districts`
 --
 ALTER TABLE `districts`
@@ -5618,7 +5537,7 @@ ALTER TABLE `divisions`
 -- AUTO_INCREMENT for table `donations`
 --
 ALTER TABLE `donations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `donners`
