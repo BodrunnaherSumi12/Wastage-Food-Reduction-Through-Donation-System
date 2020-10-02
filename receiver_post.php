@@ -30,7 +30,7 @@
                         <th>Content</th>
                         <th>Image</th>
                         <th>Created At</th>
-                        <th>Action</th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -46,11 +46,7 @@
                                        
                                        <td><img src="donner/uploads/<?php echo $post['photo']; ?>"></td>
                                        <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
-                                       <td>
-                                           <a  class="fa fa-check-circle" href="edit-post.php?edit=<?php echo $post['id']; ?>">Confirm</a>
-                                          
-                                           
-                                       </td>
+                                      
                                     </tr>
                                 <?php
                             }

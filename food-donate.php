@@ -199,6 +199,7 @@
                                 ?>
 
                             </span>
+                            
                        
                             </div>
                         <div class="col-lg-6">
@@ -221,33 +222,43 @@
 
                             </div>
                            
-                            <div class="form-row">
+                            <div class="row">
                             
-         <div class="form-group col-lg-12 ">
-           <label for="">Content</label>
-           <input type="textarea" class="form-control" name="content" placeholder="Enter Your Description" value="">
-           <span class="text-danger">
+                            <div class="form-group col-lg-6 ">
+                             <label for="">Content</label>
+                              <input type="textarea" class="form-control" name="content" placeholder="Enter Your Description" value="">
+                             <span class="text-danger">
                             <?php 
                                 if(isset($err['content'])) {
                                     echo $err['content'];
                                 }
                             ?>
                         </span>
-          </div>
-          
-      </div>
+                     </div>
+                        <div class="form-group col-lg-6 ">
+                             <label for="_address">Address</label>
+                              <input type="text" class="form-control" name="address"id="_address" placeholder="Enter Your address Detail" value="">
+                             <span class="text-danger">
+                            <?php 
+                                if(isset($err['content'])) {
+                                    echo $err['content'];
+                                }
+                            ?>
+                            </span>
+                         </div>
+                     </div>
 
         
-      <div class= "form-group col-lg-6">
+                               <div class= "form-group col-lg-6">
                
                                    <input type="submit"
                                        name="donate_form" value="Submit"
                                         class="btn btn-succeess";>
                                </div>
 
-    </div>
-    <div class="card-footer">
-    </div>
+                 </div>
+                  <div class="card-footer">
+                 </div>
 </form>
    </div>
 

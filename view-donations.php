@@ -2,58 +2,73 @@
    $page_title = 'donation list';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
+    $receiver_id = $_SESSION['receiver_id'];
   $query = "SELECT * FROM `donations` WHERE donations.receiver='$receiver_id' ORDER BY id DESC";
     $posts = $db->getData($query);
   // ver_dump(query);
   // die();
+  include 'include/_sidebar.php';
 ?>
 
 
   <body>
- 
-    <div class='col-md-6 offset-md-3' style= padding-top:50px;> 
-        <table border ="1px" style="width:600px; line-height:35px; margin:20px;">
-            <tr>
-                <th colspan="11" style="text-align:center; background: #9D0552; color:white;"><h2>Registerd Receivers</h2></th>
-            </tr>
-            <tr >
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">ID</th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Food Type </th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Amount(KG)</th>
-               
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Donner Name</th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Receiver ID</th>
-               
-               
-            </tr>
-            <?php
+  <div class= container>
+<div class="col-md-8 offset-md-2">
+    <div class="card">
+        <div class="card-header">
+        <center>
+            <h3 class="card-title"text_align="center">Requested list</h3><br>
+           
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Food Type</th>
+                        <th>Amount(KG)</th>
+                        <th>Donner Name</th>
+                       
+                        <th>Address</th>
+                        <th>Message</th>
+                        <th>Request Time</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                         if ($posts) {
                             while($post = $posts->fetch_assoc()) {
                                 ?>
-                    <tr>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['id']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['food_type']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['food_amount']; ?></td>
-
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['name']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['receiver']; ?></td>
-                       
-                      
-                    </tr>
-                    
+                                    <tr>
+                                       <td><?php echo $post['id']; ?></td>
+                                       <td><?php echo $post['food_type']; ?></td>
+                                       <td><?php echo $post['food_amount']; ?></td>
+                                       <td><?php echo $post['name']; ?></td>
+                                       
+                                       <td><?php echo $post['address']; ?></td>
+                                       <td><?php echo $post['content']; ?></td>
+                                       <td><?php echo $post['created_at']; ?></td>
+                                      
+                                    </tr>
                                 <?php
                             }
                         } else {
                             ?>
                             <tr>
-                                <td>No Data Found</td>
+                                <td>No Post found</td>
                             </tr>
                         <?php
                         }
                     ?>
-           
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
+    </div>
+    </div>
+ 
+    
     
   </body>
   <?php

@@ -19,8 +19,9 @@ if (isset($_POST['donate_form'])) {
            $union = $_POST['union'];
            $receiver = $_POST['receiver'];
            $content = $_POST['content'];
+           $address = $_POST['address'];
         
-        if($food_amount &&  $food_type && $name && $division && $district && $upazilla && $union && $receiver && $content ){
+        if($food_amount &&  $food_type && $name && $division && $district && $upazilla && $union && $receiver && $content && $address){
            if (isset($_FILES['image'])) {
                 $file_name = $_FILES['image']['name'];
                 $tmp_name = $_FILES['image']['tmp_name'];
@@ -56,7 +57,7 @@ if (isset($_POST['donate_form'])) {
           
                 // store register
                 // $insert_query = "INSERT INTO donations (food_amount, food_type,name,photo,division,district,upazilla,union,receiver) VALUES('$food_amount', '$food_type', '$name', '$file_rename','$division','$district','$upazilla','$union')";
-                $insert_query = "INSERT INTO `donations`( `food_amount`, `food_type`, `name`, `photo`, `division`, `district`, `upazilla`, `union`, `receiver`, `content`) VALUES ('$food_amount','$food_type','$name', '$file_rename','$division','$district','$upazilla','$union','$receiver','$content')";
+                $insert_query = "INSERT INTO `donations`( `food_amount`, `food_type`, `name`, `photo`, `division`, `district`, `upazilla`, `union`, `receiver`, `content`, `address`) VALUES ('$food_amount','$food_type','$name', '$file_rename','$division','$district','$upazilla','$union','$receiver','$content','$address')";
 
 
                 $run = $db->store($insert_query);

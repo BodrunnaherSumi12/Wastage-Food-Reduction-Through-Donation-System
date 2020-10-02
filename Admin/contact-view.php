@@ -1,5 +1,5 @@
 <?php 
-   $page_title = 'donation  list';
+   $page_title = '';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
   $query = "SELECT id,name,username,email,phone,message,created_at FROM contact";

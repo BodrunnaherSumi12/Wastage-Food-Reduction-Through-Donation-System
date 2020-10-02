@@ -1,5 +1,5 @@
 <?php 
-   $page_title = 'Receivers list';
+   $page_title = '';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
   $query = "SELECT id,name,email,phone,address FROM donners";
@@ -9,51 +9,56 @@
 ?>
 
 
-  <body>
- 
-    <div class='col-md-6 offset-md-3' style= padding-top:50px;> 
-        <table border ="1px" style="width:600px; line-height:35px; margin:20px;">
-            <tr>
-                <th colspan="11" style="text-align:center; background: #9D0552; color:white;"><h2>Registerd Donner</h2></th>
-            </tr>
-            <tr >
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">ID</th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Name </th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Email</th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Phone</th>
-                <th style="text-align:center;color:#9D0552; border:2px solid #9D0552;background:white;padding: 7px;">Adress</th>
-               
-               
-            </tr>
-            <?php
+<div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Registered Donner list</h3><br>
+            
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        
+                       
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                         if ($posts) {
                             while($post = $posts->fetch_assoc()) {
                                 ?>
-                    <tr>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['id']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['name']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['email']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['phone']; ?></td>
-                        <td style="text-align:center;padding: 5px;"><?php echo $post['address']; ?></td>
-                       
-                      
-                    </tr>
-                    
+                                    <tr>
+                                       <td><?php echo $post['id']; ?></td>
+                                       <td><?php echo $post['name']; ?></td>
+                                       <td><?php echo $post['email']; ?></td>
+                                       <td><?php echo $post['phone']; ?></td>
+                                       <td><?php echo $post['address']; ?></td>
+                                       <td>
+                                           
+                                           <a class="fa fa-trash" href="delete.php?delete=<?php echo $post['id']; ?>">Remove</a>
+                                           
+                                       </td>
+                                    </tr>
                                 <?php
                             }
                         } else {
                             ?>
                             <tr>
-                                <td>No Data Found</td>
+                                <td>No Post found</td>
                             </tr>
                         <?php
                         }
                     ?>
-           
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
-    
-  </body>
   <?php
     $page_title = 'Home';
     // header footer

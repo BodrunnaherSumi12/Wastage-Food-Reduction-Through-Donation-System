@@ -8,7 +8,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Category List</h3>
+            <h3 class="card-title">Category List</h3><br><br>
             <div class="card-header-action">
                 <a href="category-add.php" class="btn btn-primary">Add new Category</a>
             </div>

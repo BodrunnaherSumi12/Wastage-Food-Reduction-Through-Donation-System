@@ -1,5 +1,5 @@
 <?php 
-   $page_title = 'donation  list';
+   $page_title = '';
     include dirname(__FILE__). '/include/header.php';
     $db = new Database();
   $query = "SELECT id,name,coment,created_at FROM comments";
@@ -34,7 +34,7 @@
                                        <td><?php echo $post['id']; ?></td>
                                        <td><?php echo $post['name']; ?></td>
                                        <td><?php echo $post['coment']; ?></td>
-                                       <td><?php $d=strtotime($post['created_at']); echo date("d M, Y",$d); ?></td>
+                                       <td><?php echo $post['created_at']; ?></td>
                                     </tr>
                                 <?php
                             }

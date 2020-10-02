@@ -8,7 +8,7 @@
         <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Create Category</h3>
+                <h3 class="card-title">Create Category</h3><br><br>
                 <div class="card-header-action">
                     <a href="category.php" class="btn btn-primary">Category List</a>
                 </div>

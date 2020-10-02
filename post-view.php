@@ -64,16 +64,28 @@
                     <!-- <button type="submit" class="btn btn-primary" value="1"><spam>Receive</spam></button>--> 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Available Status of Food</label>
+                            <label class="input-group-text" for="inputGroupSelect01">Want To Receive</label>
                         </div>
                         <select class="custom-select" name='status' id="inputGroupSelect01" >
                         
                         
-                            <option value="0">Available</option>
-                            <option value="1">Received</option>
+                            
+                            <option value="1">YES</option>
+                            <option value="0">NO</option>
                         </select>
+                        
                     </div>
-                    <button type="submit" class="btn btn-primary" name="receive_food"><spam>Receive</spam></button>
+                    <?php 
+                  if (isset($_SESSION['id'])) {
+                     ?>
+                    <button type="submit" class="btn btn-primary" name="receive_food"><spam>Confirm</spam></button>
+                    <?php
+                  } else {
+                    ?>
+                    <li><a href="receiver-login.php">For Receive You Have To Login First</a></li>
+                    <?php
+                      }
+                      ?>
                 </form>
                           
                             
