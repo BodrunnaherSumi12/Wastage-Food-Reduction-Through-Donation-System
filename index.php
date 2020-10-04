@@ -30,19 +30,19 @@
         <li class="one_third first">
           <article><i class="fa fa-futbol-o"></i>
             <h6 class="heading font-x1"><a href="#">Orphanage Project</a></h6>
-            <p>Project Orphans will exists to provide care to orphans, vulnerable children, powerless young-women, and broken families located in Slum Area, Bangladesh. We will provide many different types of services to the communities we serve. At Project Orphans, we will take a long-term approach to what we do and go beyond simple involvement in the lives of the children and people we serve.<a href="#">&hellip;</a>]</p>
+            <p>Project Orphans will exists to provide care to orphans, vulnerable children, powerless young-women, and broken families located in Slum Area, Bangladesh. We will provide many different types of services to the communities we serve. </p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-linode"></i>
             <h6 class="heading font-x1"><a href="#">Education</a></h6>
-            <p>Augue ante auctor elit in iaculis nibh arcu sit amet sem tellus sed ligula vestibulum dictum in [<a href="#">&hellip;</a>]</p>
+            <p>We wants another helping project which provide education to the needy people.street Children get the higher priority.At Project Education, we will take a long-term approach to what we do lives of the children and people we serve.</p>
           </article>
         </li>
         <li class="one_third">
           <article><i class="fa fa-tag"></i>
             <h6 class="heading font-x1"><a href="#">Free Health Service</a></h6>
-            <p>Elit donec sodales varius dictum etiam sit amet elit metus sed ac ligula odio et placerat arcu sed [<a href="#">&hellip;</a>]</p>
+            <p>We want to add some doctors & hospital,,which are registered with our site,who provive health treatment to our needy people,,like steet children,steet people. [<a href="#">&hellip;</a>]</p>
           </article>
         </li>
       </ul>
@@ -59,48 +59,48 @@
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/8.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Amet tincidunt</h6>
-              <p>Etiam pulvinar mollis dui vitae porta orci fringilla.</p>
+              <h6 class="heading">AL Ikra Foundation</h6>
+              <p>Food donating on Rupganj Orphanage</p>
             </figcaption>
           </figure>
         </li>
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/3.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Tempus nulla non</h6>
-              <p>Fermentum enim curabitur posuere sit amet quam sed.</p>
+              <h6 class="heading">Save The children</h6>
+              <p>Food Collecting from White palace Community center.</p>
             </figcaption>
           </figure>
         </li>
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/4.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Tristique cras</h6>
-              <p>Purus arcu condimentum non euismod non feugiat nec.</p>
+              <h6 class="heading">The Foundation For Women,Orphan,& Children</h6>
+              <p>Food collecting from on Weeding party which happened in own House.</p>
             </figcaption>
           </figure>
         </li>
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/5.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Leo vestibulum</h6>
-              <p>Mi fringilla non tellus eu ornare lobortis mauris.</p>
+              <h6 class="heading">Bangladesh Chairity Right & Human Resource</h6>
+              <p>Food Collecting From On Resturant Kitchen.</p>
             </figcaption>
           </figure>
         </li>
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/6.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Quisque auctor</h6>
-              <p>Neque nibh in porta lacus iaculis nec duis convallis.</p>
+              <h6 class="heading">Bangladeshi American Community For Charity BACC</h6>
+              <p>Food Distribution on Street childrens in Mirpur.</p>
             </figcaption>
           </figure>
         </li>
         <li class="one_third">
           <figure><a href="#"><img src="images/demo/7.jpg" alt=""></a>
             <figcaption>
-              <h6 class="heading">Sapien imperdiet</h6>
-              <p>Lacinia ligula mauris pretium diam nec hendrerit.</p>
+              <h6 class="heading">Manusher Jonno Foundation</h6>
+              <p>Food Donating on Alor School Dhaka University campus.</p>
             </figcaption>
           </figure>
         </li>
@@ -126,35 +126,35 @@
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
       <h6 class="heading">Donner Posts</h6>
-      <p>All Donner Donations Posts Are Here</p>
+      <p>A Piece of Donner Post</p>
     </div>
     <ul class="nospace group latest">
       <li class="one_half first">
         <article>
           <div class="excerpt">
             <ul class="nospace meta">
-              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+              <li><i class="fa fa-user"></i> <a href="#">Donner</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Food Donation</a></li>
             </ul>
-            <h6 class="heading">Tempus at donec finibus</h6>
+            <h6 class="heading">Please Collect within 1 Hour</h6>
             <p>Ex quis ullamcorper lobortis quisque imperdiet semper mi vitae aliquet justo feugiat sodales in quis velit vitae risus malesuada varius aenean diam lacus vestibulum vel erat elementum [<a href="#">&hellip;</a>]</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
+            <footer><a href="post.php">Read More &raquo;</a></footer>
           </div>
-          <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Apr</em></time>
+          <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Sept</em></time>
         </article>
       </li>
       <li class="one_half">
         <article>
           <div class="excerpt">
             <ul class="nospace meta">
-              <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
-              <li><i class="fa fa-tag"></i> <a href="#">Category Name</a></li>
+              <li><i class="fa fa-user"></i> <a href="#">Donner</a></li>
+              <li><i class="fa fa-tag"></i> <a href="#">Food Donation</a></li>
             </ul>
             <h6 class="heading">Lobortis mi suspendisse</h6>
             <p>Consequat dui dolor sit amet tincidunt erat sollicitudin id ut vel posuere eros nunc id ipsum mi aenean pulvinar ultrices blandit duis iaculis diam laoreet placerat vitae consequat [<a href="#">&hellip;</a>]</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
+            <footer><a href="post.php">Read More &raquo;</a></footer>
           </div>
-          <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Apr</em></time>
+          <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Sept</em></time>
         </article>
       </li>
     </ul>

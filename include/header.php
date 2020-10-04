@@ -52,7 +52,7 @@ if(isset($_SESSION['old_data']))
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="#">Wastage Food Reduction Trough Donation system</a></h1>
+      <h1><a>Wastage Food Reduction Through Donation system</a></h1>
       <p>Food For All</p>
     </div>
     <div id="quickinfo" class="fl_right">

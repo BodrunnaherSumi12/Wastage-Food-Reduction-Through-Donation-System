@@ -3,7 +3,7 @@
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_quarter first">
-      <h6 class="heading">Est aenean fermentum</h6>
+      <h6 class="heading">Our Parmanent address</h6>
       <ul class="nospace btmspace-30 linklist contact">
         <li><i class="fa fa-map-marker"></i>
           <address>
@@ -26,18 +26,16 @@
         <li><a href="#">Ipsum eu urna tristique</a></li>
         <li><a href="#">Tempor nunc aliquet</a></li>
         <li><a href="#">Ipsum sit amet mollis</a></li>
-        <li><a href="#">Ullamcorper odio velit</a></li>
-        <li><a href="#">Vulputate magna at rhoncus</a></li>
+        
       </ul>
     </div>
     <div class="one_quarter">
       <h6 class="heading">About</h6>
       <ul class="nospace linklist">
-        <li><a href="#">Turpis diam eget quam in</a></li>
-        <li><a href="#">Blandit sed nulla id tempor</a></li>
+        <li><a href="contact.php">Contact With Us</a></li>
+        <li><a href="about.php">About Us</a></li>
         <li><a href="#">Duis interdum ligula at</a></li>
-        <li><a href="#">Lectus venenatis blandit</a></li>
-        <li><a href="#">Nulla molestie tellus</a></li>
+        
       </ul>
     </div>
     <div class="one_quarter">
@@ -60,8 +58,8 @@
 <div class="wrapper row5" style="margin-top:00px;">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2020 - All Rights Reserved - <a href="#">Datartrix soft</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.facebook.com/bodrunnaher.sumi.9" title="Junior Wev Developer">Bodrunnaher Sumi</a></p>
     <!-- ################################################################################################ -->
   </div>
 </div>
