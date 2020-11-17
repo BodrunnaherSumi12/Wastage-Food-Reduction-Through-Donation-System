@@ -14,6 +14,9 @@
             <h3 class="card-title">Registered Receiver list</h3><br>
             
         </div>
+        <div class="card-header-action">
+                <a href="receiver-list-print.php" class="btn btn-primary">Print Receiver List Report</a>
+            </div>
         <div class="card-body">
             <table class="table">
                 <thead>

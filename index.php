@@ -47,9 +47,9 @@
         </li>
       </ul>
     </section>
-    <!-- ################################################################################################ -->
+    
     <hr class="btmspace-80">
-    <!-- ################################################################################################ -->
+    <!-- ###########################Gallery Section############################################## -->
     <section>
       <div class="sectiontitle">
         <h6 class="heading">OUR SOME MEMORIES</h6>
@@ -111,19 +111,19 @@
     <div class="clear"></div>
   </main>
 </div>
-<!-- ################################################################################################ -->
+<!-- ##################################Break################################################### -->
 <div class="wrapper coloured">
   <article class="hoc cta clear"> 
-    <!-- ################################################################################################ -->
+   
     <h6 class="three_quarter first">Enim nulla nec eros malesuada ligula nec finibus</h6>
     <footer class="one_quarter"><a class="btn" href="#">Go to First &raquo;</a></footer>
-    <!-- ################################################################################################ -->
+   
   </article>
 </div>
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
   <section class="hoc container clear"> 
-    <!-- ################################################################################################ -->
+    <!-- ##################################Donner Post##################################################### -->
     <div class="sectiontitle">
       <h6 class="heading">Donner Posts</h6>
       <p>A Piece of Donner Post</p>
@@ -137,7 +137,7 @@
               <li><i class="fa fa-tag"></i> <a href="#">Food Donation</a></li>
             </ul>
             <h6 class="heading">Please Collect within 1 Hour</h6>
-            <p>Ex quis ullamcorper lobortis quisque imperdiet semper mi vitae aliquet justo feugiat sodales in quis velit vitae risus malesuada varius aenean diam lacus vestibulum vel erat elementum [<a href="#">&hellip;</a>]</p>
+            <p>Here is 8 pound rice ,which coocked in morning,We are opping that you collect them.which will be essantial for your organizaion. [<a href="#">&hellip;</a>]</p>
             <footer><a href="post.php">Read More &raquo;</a></footer>
           </div>
           <time datetime="2045-04-06T08:15+00:00"><strong>06</strong> <em>Sept</em></time>
@@ -150,8 +150,8 @@
               <li><i class="fa fa-user"></i> <a href="#">Donner</a></li>
               <li><i class="fa fa-tag"></i> <a href="#">Food Donation</a></li>
             </ul>
-            <h6 class="heading">Lobortis mi suspendisse</h6>
-            <p>Consequat dui dolor sit amet tincidunt erat sollicitudin id ut vel posuere eros nunc id ipsum mi aenean pulvinar ultrices blandit duis iaculis diam laoreet placerat vitae consequat [<a href="#">&hellip;</a>]</p>
+            <h6 class="heading">Please collect it, within 1 Hour</h6>
+            <p>Here is 8 pound rice ,which coocked in morning,We are opping that you collect them.which will be essantial for your organizaion. [<a href="#">&hellip;</a>]</p>
             <footer><a href="post.php">Read More &raquo;</a></footer>
           </div>
           <time datetime="2045-04-05T08:15+00:00"><strong>05</strong> <em>Sept</em></time>
@@ -159,10 +159,10 @@
       </li>
     </ul>
     <footer class="center"><a class="btn" href="post.php">View All Posts &raquo;</a></footer>
-    <!-- ################################################################################################ -->
+    
   </section>
 </div>
-<!-- ################################################################################################ -->
+
 
 
 <?php
